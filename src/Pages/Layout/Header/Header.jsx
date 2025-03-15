@@ -316,7 +316,7 @@ export default function Header() {
         <div className="grid navbar-grid">
           <div className="logo">
             <img
-              src="/public/img/logoyoga.png"
+              src="/img/logoyoga.png"
               alt="Logo"
               className="logo-img"
             />
