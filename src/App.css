@@ -1,0 +1,151 @@
+/* Ensure the header and container take full width */
+/* header {
+  width: 100%;
+  height: 8rem;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  background-color: #dcd0ff;  
+
+  
+} */  
+
+/* Ensure the header is fixed at the top */
+header {
+  width: 100%;
+  height: 8rem;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  background-color: #dcd0ff;
+  position: fixed; /* Make the header fixed */
+  top: 0; /* Stick to the top */
+  left: 0; /* Align to the left */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.container {
+  max-width: 132rem;
+  margin: 0 auto; /* Center the container */
+  height: 100%; /* Take full height of the header */
+  padding: 0 3.2rem; /* Add padding to the sides */
+}
+
+/* Grid layout for navbar */
+.navbar-grid {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Logo takes auto width, nav takes remaining space */
+  align-items: center;
+  height: 100%; /* Take full height of the container */
+  gap: 1rem; /* Add gap between logo and nav items */
+}
+
+/* Logo container */
+.logo {
+  display: flex;
+  align-items: center; /* Vertically center the logo */
+  justify-content: flex-start; /* Align logo to the left */
+  height: 100%; /* Take full height of the navbar */
+}
+
+/* Logo image */
+.logo-img {
+  max-width: 100%; /* Ensure the logo doesn't overflow its container */
+  height: auto; /* Maintain aspect ratio */
+  width: 150px; /* Default size for larger screens */
+  transition: width 0.3s ease; /* Smooth transition for resizing */
+}
+
+/* Media Queries for Responsive Logo Sizing */
+@media screen and (max-width: 998px) {
+  .logo-img {
+    width: 120px; /* Slightly smaller for tablets */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo-img {
+    width: 100px; /* Smaller for smaller tablets */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo-img {
+    width: 80px; /* Smallest for mobile devices */
+  }
+}
+
+/* Navigation menu */
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.3rem;
+}
+
+/* Hamburger menu */
+.ham-menu {
+  display: none;
+}
+
+/* Media queries for mobile menu */
+@media screen and (max-width: 998px) {
+  .menu-web {
+    display: none;
+  }
+
+  /* Hamburger menu */
+  .ham-menu {
+    display: inline-block;
+    text-align: end;
+  }
+
+  /* Mobile menu */
+  .menu-mobile {
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px;
+    overflow: hidden; /* Hide overflow content */
+    max-height: 0; /* Start with zero height */
+    transition: max-height 0.5s ease, opacity 0.3s ease; /* Smooth transition for height and opacity */
+    opacity: 0; /* Start fully transparent */
+  }
+
+  /* When menu is open */
+  .menu-mobile.open {
+    max-height: 500px; /* Adjust based on your content height */
+    opacity: 1; /* Fully visible */
+  }
+
+  .menu-mobile ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0; /* Add padding for better spacing */
+
+    & li:first-child {
+      margin-top: 1rem;
+    }
+
+    & li:last-child {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+/* List items */
+li {
+  list-style: none;
+}
+
+/* Navigation links */
+nav ul li a {
+  font-size: 1.5rem; /* Increase font size */
+  padding: 0.5rem 1rem; /* Add padding for better spacing */
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Text color */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+  color: #2e86c1; /* Hover color */
+  text-decoration: underline; /* Add underline on hover */
+}  
