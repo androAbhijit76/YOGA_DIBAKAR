@@ -335,11 +335,11 @@ export default function Header() {
                   About
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/services" onClick={closeMenu}>
                   Services
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   // target="_blank"
