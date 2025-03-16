@@ -726,7 +726,7 @@ export default function Benefits() {
               sx={{ height: { xs: '300px', sm: '400px', md: '500px' }, objectFit: 'cover' }}
               title="Yoga Benefits"
               component="img"
-              image="/img/benefity.jpg"
+              image="/img/benefitY.jpg"
               alt="Yoga Benefits"
             />
           </Card>
