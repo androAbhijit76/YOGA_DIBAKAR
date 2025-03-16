@@ -1820,7 +1820,7 @@ const Contact = () => {
                     Address
                   </Typography>
                   <Typography variant="body1" color="white">
-                    123 Main Street, City, Country
+                    Laskarpur Peyara Bagan,Kol-700153
                   </Typography>
                 </Box>
               </Grid>
@@ -1840,7 +1840,7 @@ const Contact = () => {
                     Phone
                   </Typography>
                   <Typography color="white" variant="body1">
-                    +1 234 567 890
+                    (+91)9339058372
                   </Typography>
                 </Box>
               </Grid>
@@ -1860,7 +1860,7 @@ const Contact = () => {
                     Email
                   </Typography>
                   <Typography variant="body1" color="white">
-                    info@example.com
+                    dibakaryogarathiinstitute@gmail.com
                   </Typography>
                 </Box>
               </Grid>
