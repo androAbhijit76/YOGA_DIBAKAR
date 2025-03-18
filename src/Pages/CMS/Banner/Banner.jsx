@@ -943,6 +943,165 @@
 
 
 
+// import { useEffect } from "react";
+// import AOS from "aos";
+// import "aos/dist/aos.css"; // Import AOS styles
+// import { Box, Grid, Typography } from "@mui/material";
+
+// export default function Banner() {
+//   useEffect(() => {
+//     AOS.init({
+//       duration: 2000, // Animation duration in ms
+//       once: true, // Animation occurs only once
+//     });
+//   }, []);
+
+//   return (
+//     <Box
+//       sx={{
+//         width: "100%",
+//         height: { xs: "50vh", sm: "60vh", md: "75vh", lg: "95vh" }, // Responsive height
+//         overflowX: "hidden",
+//         overflowY: "hidden",
+//         mt: "5rem",
+//       }}
+//     >
+//       <Grid container>
+//         <Grid
+//           item
+//           xs={12}
+//           md={12}
+//           lg={12}
+//           data-aos="zoom-in-up" // AOS animation
+//           sx={{
+//             backgroundImage: `url('/img/pexels-elly-fairytale-3822864.jpg')`,
+//             backgroundRepeat: "no-repeat",
+//             backgroundSize: "cover", // Ensure the image covers the container
+//             backgroundPosition: "center",
+//             height: { xs: "50vh", sm: "60vh", md: "75vh", lg: "95vh" }, // Responsive height
+//             display: "flex",
+//             justifyContent: "flex-start",
+//             alignItems: "flex-start",
+//             pt: { xs: 10, sm: 15, md: 20, lg: 30 }, // Responsive padding-top
+//             pl: { xs: 2, sm: 4, md: 6, lg: 8 }, // Responsive padding-left
+//           }}
+//         >
+//           <Box
+//             sx={{
+//               display: "flex",
+//               flexDirection: "column",
+//               alignItems: "flex-start",
+//             }}
+//           >
+//             {/* Text with Zoom-In-Up Effect */}
+//             <Typography
+//               variant="h4"
+//               data-aos="zoom-in-up" // AOS animation
+//               sx={{
+//                 color: "white",
+//                 textAlign: "left",
+//                 fontSize: { xs: "1.2rem", sm: "1.5rem", md: "2rem", lg: "2.5rem" }, // Responsive font size
+//                 fontWeight: "bold",
+//                 // textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+//               }}
+//             >
+//               WELCOME TO
+//             </Typography>
+
+//             <Typography
+//               variant="h4"
+//               data-aos="zoom-in-up" // AOS animation
+//               sx={{
+//                 color: "white",
+//                 textAlign: "left",
+//                 fontSize: { xs: "1.2rem", sm: "1.5rem", md: "2rem", lg: "2.5rem" }, // Responsive font size
+//                 fontWeight: "bold",
+//                 textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+//               }}
+//             >
+//               <Box
+//                 component="span"
+//                 sx={{
+//                   color: "#800080",
+//                   fontSize: { xs: "1.5rem", sm: "1.8rem", md: "2.3rem", lg: "2.8rem" }, // Responsive font size
+//                 }}
+//               >
+//                 DIBAKAR
+//               </Box>{" "}
+//               <Box
+//                 component="span"
+//                 sx={{
+//                   color: "#800080",
+//                   fontSize: { xs: "1.5rem", sm: "1.8rem", md: "2.3rem", lg: "2.8rem" }, // Responsive font size
+//                 }}
+//               >
+//                 YOGA
+//               </Box>{" "}
+//               <Box
+//                 component="span"
+//                 sx={{
+//                   color: "#800080",
+//                   fontSize: { xs: "1.5rem", sm: "1.8rem", md: "2.3rem", lg: "2.8rem" }, // Responsive font size
+//                 }}
+//               >
+//                 RATHI
+//               </Box>
+//             </Typography>
+
+//             <Typography
+//               variant="h4"
+//               data-aos="zoom-in-up" // AOS animation
+//               sx={{
+//                 color: "white",
+//                 textAlign: "left",
+//                 fontSize: { xs: "1.2rem", sm: "1.5rem", md: "2rem", lg: "2.5rem" }, // Responsive font size
+//                 fontWeight: "bold",
+//                 textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+//               }}
+//             >
+//               <Box
+//                 component="span"
+//                 sx={{
+//                   color: "#1E90FF",
+//                   fontSize: { xs: "1.5rem", sm: "1.8rem", md: "2.3rem", lg: "2.8rem" }, // Responsive font size
+//                 }}
+//               >
+//                 INSTITUTE
+//               </Box>
+//             </Typography>
+//           </Box>
+//         </Grid>
+//       </Grid>
+//     </Box>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
@@ -983,7 +1142,7 @@ export default function Banner() {
             justifyContent: "flex-start",
             alignItems: "flex-start",
             pt: { xs: 10, sm: 15, md: 20, lg: 30 }, // Responsive padding-top
-            pl: { xs: 2, sm: 4, md: 6, lg: 8 }, // Responsive padding-left
+            pl: { xs: 1, sm: 2, md: 3, lg: 4 }, // Reduced padding-left to move text more to the left
           }}
         >
           <Box
