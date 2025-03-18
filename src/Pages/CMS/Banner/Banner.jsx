@@ -1186,7 +1186,8 @@ export default function Banner() {
                 }}
               >
                 DIBAKAR
-              </Box>{" "}
+              </Box>{" "} 
+              <br />
               <Box
                 component="span"
                 sx={{
