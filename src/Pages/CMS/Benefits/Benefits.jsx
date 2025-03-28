@@ -720,7 +720,7 @@ export default function Benefits() {
         }}
       >
         {/* Image Section */}
-        <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={5}>
           <Card sx={{ maxWidth: '100%', height: 'auto' }}>
             <CardMedia
               sx={{ height: { xs: '300px', sm: '400px', md: '500px' }, objectFit: 'cover' }}
@@ -730,7 +730,16 @@ export default function Benefits() {
               alt="Yoga Benefits"
             />
           </Card>
-        </Grid>
+        </Grid> 
+
+
+
+
+        {/* Video Section */}
+       
+
+
+        
 
         {/* Benefits List Section */}
         <Grid item xs={12} md={6}>

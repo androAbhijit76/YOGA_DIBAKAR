@@ -1,8 +1,11 @@
 // import React from 'react'
 
-import Animated from "../Animated/Animated";
+// import Animated from "../Animated/Animated";
 import Banner from "../Banner/Banner";
 import Benefits from "../Benefits/Benefits";
+import Branches from "../Branches/Branches";
+// import Video from "../Viedo/Viedo";
+// import Video from "../Viedo/Viedo";
 
 
 export default function Home() {
@@ -10,7 +13,9 @@ export default function Home() {
    <>
     <Banner/>  
     <Benefits/> 
-    <Animated/>
+    {/* <Animated/> */} 
+    {/* <Video/> */} 
+    <Branches/>
    
    </>
     
