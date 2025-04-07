@@ -1413,7 +1413,7 @@
 
 
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import {
   Box,
@@ -1438,7 +1438,10 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import ScheduleIcon from "@mui/icons-material/Schedule";
 import { motion } from "framer-motion";
-import { styled } from "@mui/system";
+import { styled } from "@mui/system";  
+
+
+
 
 // Styled components with theme fallbacks
 const FloatingContainer = styled(Box)(({ theme }) => ({
@@ -1546,7 +1549,13 @@ const Contact = () => {
   // Fallback colors if theme is not available
   const primaryColor = theme.palette?.primary?.main || "#1976d2";
   const textPrimary = theme.palette?.text?.primary || "#000000";
-  const textSecondary = theme.palette?.text?.secondary || "#666666";
+  const textSecondary = theme.palette?.text?.secondary || "#666666";  
+
+  
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
 
   return (
     <>

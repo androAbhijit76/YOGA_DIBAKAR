@@ -1851,7 +1851,8 @@ import YogaIcon from '@mui/icons-material/SelfImprovement';
 import SpaIcon from '@mui/icons-material/Spa';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import EmojiNatureIcon from '@mui/icons-material/EmojiNature';
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; 
+import { useEffect } from 'react';
 
 // Animation variants
 const containerVariants = {
@@ -2007,7 +2008,31 @@ export default function AboutUs() {
       title: "Wellness Library",
       description: "Resource center with yoga philosophy texts"
     }
-  ];
+  ];  
+ 
+
+
+    // Smooth scroll to top on component mount
+    // useEffect(() => {
+    //   window.scrollTo({
+    //     top: 0,
+    //     behavior: 'smooth'
+    //   });
+    // }, []);   
+
+
+
+    useEffect(() => {
+      // Instant scroll to top (no animation)
+      window.scrollTo(0, 0);
+      
+      // Alternative method that also works
+      // document.documentElement.scrollTop = 0;
+    }, []);
+  
+  
+  
+
 
   return (
     <motion.div
