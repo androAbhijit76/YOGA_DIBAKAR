@@ -687,7 +687,7 @@
 
 
 
-import React from 'react';
+// import React from 'react';
 import { 
   Box,
   Container,
@@ -819,7 +819,8 @@ const ServicesComponent = () => {
         { icon: <CalendarIcon color="secondary" />, text: 'Flexible scheduling' },
         { icon: <PeopleIcon color="secondary" />, text: 'Private or small group' }
       ],
-      cta: 'Book a Session'
+      cta: 'Book a Session',
+      phone:"+919339058372"
     },
     {
       title: 'Corporate Yoga',
@@ -831,7 +832,8 @@ const ServicesComponent = () => {
         { icon: <PeopleIcon color="secondary" />, text: 'Team building through yoga' }
       ],
       cta: 'Inquire Now',
-      highlighted: true
+      highlighted: true,
+      phone:"+919339058372"
     },
     {
       title: 'School Yoga Programs',
@@ -842,7 +844,8 @@ const ServicesComponent = () => {
         { icon: <CalendarIcon color="secondary" />, text: 'Regular school programs' },
         { icon: <PeopleIcon color="secondary" />, text: 'Whole class participation' }
       ],
-      cta: 'Learn More'
+      cta: 'Learn More',
+      phone:"+919339058372"
     }
   ];
 
@@ -988,7 +991,10 @@ const ServicesComponent = () => {
                       variant="contained" 
                       color="secondary"
                       size={isXs ? 'small' : isSm ? 'medium' : 'large'}
-                      fullWidth
+                      fullWidth 
+                      href={`https://wa.me/${service.phone}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       sx={{
                         fontWeight: 600,
                         letterSpacing: { xs: 'normal', sm: '0.5px' },
