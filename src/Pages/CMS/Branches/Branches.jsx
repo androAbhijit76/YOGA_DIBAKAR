@@ -978,14 +978,14 @@ export default function Branches() {
             aria-controls={`panel${index}-content`}
             id={`panel${index}-header`}
           >
-            {/* <BranchName variant="h6" component="h3">
+            <BranchName variant="h6" component="h3">
               {isMobile
                 ? list.Name
-                    .replace("Institute", "Inst.")
-                    .replace("Physiotherapy", "Physio.")
-                    .replace("Centre", "Ctr.")
+                    .replace("Institute", "Institute")
+                    .replace("Physiotherapy", "Physiotherapy")
+                    .replace("Centre", "Centre")
                 : list.Name}
-            </BranchName> */}
+            </BranchName>
           </GradientAccordionSummary>
           <GradientAccordionDetails>
             <AddressText>
