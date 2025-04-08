@@ -915,32 +915,32 @@ export default function Branches() {
     {
       Name: "1) Judges Group Of Yoga Society",
       Add: "Lokenathpur, Peyara Bagan, Kolkata - 700153",
-      phone: "+916290409618",
-      locationLink: "https://maps.google.com/?q=Lokenathpur,Peyara+Bagan,Kolkata"
+      phone: "+919339058372",
+      // locationLink: "https://maps.google.com/?q=Lokenathpur,Peyara+Bagan,Kolkata"
     },
     {
       Name: "2) Khardaha Yoga and Physiotherapy Institute",
       Add: "103, Nabun Pally, Khardaha, Kolkata - 700119",
-      phone: "+916290409618",
-      locationLink: "https://maps.google.com/?q=103,Nabun+Pally,Khardaha,Kolkata"
+      phone: "+919339058372",
+      // locationLink: "https://maps.google.com/?q=103,Nabun+Pally,Khardaha,Kolkata"
     },
     {
       Name: "3) Maa Sarada Yoga and Physiotherapy Institute",
       Add: "D. Gupta Lane, Kolkata - 700050",
-      phone: "+916290409618",
-      locationLink: "https://maps.google.com/?q=D.+Gupta+Lane,Kolkata"
+      phone: "+919339058372",
+      // locationLink: "https://maps.google.com/?q=D.+Gupta+Lane,Kolkata"
     },
     {
       Name: "4) Unic Physiotherapy and Yoga Centre",
       Add: "Sihar, Bankura, Pin - 722161",
-      phone: "+916290409618",
-      locationLink: "https://maps.google.com/?q=Sihar,Bankura"
+      phone: "+919339058372",
+      // locationLink: "https://maps.google.com/?q=Sihar,Bankura"
     },
     {
       Name: "5) Umang Yoga Institute",
       Add: "Coopers Camp, 8 no ward, Ranaghat, Nadia, Pin - 741232",
-      phone: "+916290409618",
-      locationLink: "https://maps.google.com/?q=Coopers+Camp,Ranaghat,Nadia"
+      phone: "+919339058372",
+      // locationLink: "https://maps.google.com/?q=Coopers+Camp,Ranaghat,Nadia"
     },
   ];
 
@@ -1031,7 +1031,7 @@ export default function Branches() {
                 </ContactText>
               </ContactItem>
               
-              <ContactItem
+              {/* <ContactItem
                 href={list.locationLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -1044,7 +1044,7 @@ export default function Branches() {
                 <ContactText>
                   View on <PhoneNumber>Google Maps</PhoneNumber>
                 </ContactText>
-              </ContactItem>
+              </ContactItem> */}
             </ContactContainer>
           </GradientAccordionDetails>
         </GradientAccordion>
