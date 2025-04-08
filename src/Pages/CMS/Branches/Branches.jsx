@@ -659,7 +659,7 @@ const itemVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.2,
       ease: "easeOut"
     }
   }
@@ -978,14 +978,14 @@ export default function Branches() {
             aria-controls={`panel${index}-content`}
             id={`panel${index}-header`}
           >
-            <BranchName variant="h6" component="h3">
+            {/* <BranchName variant="h6" component="h3">
               {isMobile
                 ? list.Name
                     .replace("Institute", "Inst.")
                     .replace("Physiotherapy", "Physio.")
                     .replace("Centre", "Ctr.")
                 : list.Name}
-            </BranchName>
+            </BranchName> */}
           </GradientAccordionSummary>
           <GradientAccordionDetails>
             <AddressText>
@@ -1007,8 +1007,8 @@ export default function Branches() {
                 href={`https://wa.me/${list.phone}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                // whileHover={{ scale: 1.02 }}
+                // whileTap={{ scale: 0.98 }}
               >
                 <ContactIcon>
                   <WhatsAppIcon fontSize="small" />
@@ -1020,8 +1020,8 @@ export default function Branches() {
               
               <ContactItem
                 href={`tel:${list.phone}`}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                // whileHover={{ scale: 1.02 }}
+                // whileTap={{ scale: 0.98 }}
               >
                 <ContactIcon>
                   <PhoneIcon fontSize="small" />
