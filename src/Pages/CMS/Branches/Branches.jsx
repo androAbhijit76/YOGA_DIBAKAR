@@ -369,9 +369,9 @@
 
 
 
-import { useState } from "react";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
+ import { useState } from "react";
+ import Accordion from "@mui/material/Accordion";
+ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -379,7 +379,9 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { styled } from "@mui/material/styles";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
+import PhoneIcon from "@mui/icons-material/Phone";
+import { motion } from "framer-motion"; 
+import Box from "@mui/material/Box";
 // Styled components
 const MainContainer = styled("div")(({ theme }) => ({
   marginTop: "6rem",
@@ -501,7 +503,68 @@ const WhatsAppText = styled("span")(({ theme }) => ({
   fontWeight: "500",
   transition: "all 0.3s ease",
   [theme.breakpoints.down("sm")]: { fontSize: "0.9rem" },
+}));   
+
+
+
+// const ContactContainer = styled(Box)({
+//   display: "flex",
+//   flexDirection: "column",
+//   gap: "16px",
+//   marginTop: "12px",
+// });
+
+const ContactItem = styled(motion.a)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  gap: "12px",
+  textDecoration: "none",
+  color: theme.palette.text.secondary,
+  padding: "12px 16px",
+  borderRadius: "10px",
+  background: "rgba(255, 255, 255, 0.7)",
+  border: "1px solid rgba(110, 69, 226, 0.15)",
+  transition: "all 0.3s ease",
+  boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+  "&:hover": {
+    background: "rgba(255, 255, 255, 0.9)",
+    transform: "translateY(-2px)",
+    boxShadow: "0 4px 12px rgba(110, 69, 226, 0.15)",
+    color: theme.palette.text.primary,
+  },
+  [theme.breakpoints.down("sm")]: {
+    padding: "10px 14px",
+  },
 }));
+
+const ContactIcon = styled(Box)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "40px",
+  height: "40px",
+  borderRadius: "50%",
+  background: "linear-gradient(135deg, #FF6B8B 0%, #6E45E2 100%)",
+  color: "white",
+  flexShrink: 0,
+  [theme.breakpoints.down("sm")]: {
+    width: "36px",
+    height: "36px",
+  },
+}));
+
+const ContactText = styled(Typography)(({ theme }) => ({
+  fontSize: "1.05rem",
+  fontWeight: "500",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "0.95rem",
+  },
+}));
+
+const PhoneNumber = styled("span")({
+  color: "#6E45E2",
+  fontWeight: "600",
+});
 
 export default function Branches() {
   const theme = useTheme();
@@ -579,7 +642,17 @@ export default function Branches() {
                 <StyledWhatsAppIcon />
                 <WhatsAppText>Chat with us on WhatsApp</WhatsAppText>
               </WhatsAppLink>
-            </WhatsAppContainer>
+            </WhatsAppContainer>   
+            <ContactItem>
+
+            <ContactIcon>
+                  <PhoneIcon fontSize="small" />
+                </ContactIcon>
+                <ContactText>
+                  Call us: <PhoneNumber>{list.phone}</PhoneNumber>
+                </ContactText>
+              </ContactItem>
+
           </GradientAccordionDetails>
         </GradientAccordion>
       ))}
