@@ -359,6 +359,308 @@
 
 
 
+// import { useState } from "react";
+// import {
+//   Accordion,
+//   AccordionSummary,
+//   AccordionDetails,
+//   Typography,
+//   Box,
+//   useTheme,
+//   useMediaQuery,
+//   styled
+// } from "@mui/material";
+// import { ExpandMore, WhatsApp, Phone } from "@mui/icons-material";
+// import { motion } from "framer-motion";
+
+// // Constants
+// const BRANCHES_DATA = [
+//   {
+//     id: 1,
+//     name: "Judges Group Of Yoga Society",
+//     address: "Lokenathpur, Peyara Bagan, Kolkata - 700153",
+//     phone: "+919339058372",
+//   },
+//   {
+//     id: 2,
+//     name: "Khardaha Yoga and Physiotherapy Institute",
+//     address: "103, Nabun Pally, Khardaha, Kolkata - 700119",
+//     phone: "+919339058372",
+//   },
+//   {
+//     id: 3,
+//     name: "Maa Sarada Yoga and Physiotherapy Institute",
+//     address: "D. Gupta Lane, Kolkata - 700050",
+//     phone: "+919339058372",
+//   },
+//   {
+//     id: 4,
+//     name: "Unic Physiotherapy and Yoga Centre",
+//     address: "Sihar, Bankura, Pin - 722161",
+//     phone: "+919339058372",
+//   },
+//   {
+//     id: 5,
+//     name: "Umang Yoga Institute",
+//     address: "Coopers Camp, 8 no ward, Ranaghat, Nadia, Pin - 741232",
+//     phone: "+919339058372",
+//   },
+// ];
+
+// // Styled Components
+// const MainContainer = styled("div")(({ theme }) => ({
+//   margin: "3.8rem auto 0",
+//   padding: theme.spacing(0, 2.5, 5, 2.5),
+//   maxWidth: "800px",
+//   background:
+//     "radial-gradient(circle at center, rgba(255,245,250,0.8) 0%, rgba(240,245,255,0.8) 100%)",
+//   borderRadius: 24,
+//   boxShadow: "0 8px 32px rgba(110, 69, 226, 0.1)",
+//   [theme.breakpoints.down("md")]: {
+//     marginTop: theme.spacing(8),
+//     padding: theme.spacing(0, 2, 4, 2),
+//   },
+//   [theme.breakpoints.down("sm")]: {
+//     marginTop: theme.spacing(6),
+//     padding: theme.spacing(0, 1.5, 3, 1.5),
+//     borderRadius: 16,
+//   },
+// }));
+
+// const GradientAccordion = styled(Accordion)(({ theme }) => ({
+//   marginBottom: theme.spacing(2),
+//   borderRadius: "12px !important",
+//   overflow: "hidden",
+//   boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+//   background: "linear-gradient(45deg, #ffffff 0%, #f8f8f8 100%)",
+//   "&:before": { display: "none" },
+//   "&.Mui-expanded": { margin: theme.spacing(2, 0) },
+//   [theme.breakpoints.down("sm")]: { borderRadius: "8px !important" },
+// }));
+
+// const GradientAccordionSummary = styled(AccordionSummary)(({ theme }) => ({
+//   background: "linear-gradient(45deg, #FF6B8B 0%, #6E45E2 100%)",
+//   color: "white",
+//   fontWeight: 600,
+//   minHeight: 64,
+//   "&.Mui-expanded": { minHeight: 64 },
+//   "& .MuiAccordionSummary-content": {
+//     alignItems: "center",
+//     margin: theme.spacing(1.5, 0),
+//   },
+//   [theme.breakpoints.down("sm")]: {
+//     minHeight: 56,
+//     "&.Mui-expanded": { minHeight: 56 },
+//   },
+// }));
+
+// const GradientAccordionDetails = styled(AccordionDetails)(({ theme }) => ({
+//   padding: theme.spacing(3),
+//   background: "linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%)",
+//   borderLeft: "4px solid #6E45E2",
+//   display: "flex",
+//   flexDirection: "column",
+//   gap: theme.spacing(2),
+//   [theme.breakpoints.down("sm")]: { padding: theme.spacing(2) },
+// }));
+
+// const SectionTitle = styled(Typography)(({ theme }) => ({
+//   textAlign: "center",
+//   marginBottom: theme.spacing(4),
+//   background: "linear-gradient(45deg, #FF6B8B 30%, #6E45E2 90%)",
+//   WebkitBackgroundClip: "text",
+//   backgroundClip: "text",
+//   color: "transparent",
+//   fontWeight: 800,
+//   fontSize: "2.5rem",
+//   [theme.breakpoints.down("md")]: {
+//     fontSize: "2.2rem",
+//     marginBottom: theme.spacing(3),
+//   },
+//   [theme.breakpoints.down("sm")]: { 
+//     fontSize: "1.8rem", 
+//     marginBottom: theme.spacing(2.5) 
+//   },
+// }));
+
+// const AddressText = styled(Typography)(({ theme }) => ({
+//   fontSize: "1.1rem",
+//   color: theme.palette.text.secondary,
+//   "& strong": { color: "#6E45E2" },
+//   [theme.breakpoints.down("sm")]: { fontSize: "1rem" },
+// }));
+
+// const BranchName = styled(Typography)(({ theme }) => ({
+//   fontSize: "1.2rem",
+//   fontWeight: 600,
+//   color: "white",
+//   [theme.breakpoints.down("sm")]: { 
+//     fontSize: "1rem",
+//     whiteSpace: "nowrap",
+//     overflow: "hidden",
+//     textOverflow: "ellipsis",
+//     maxWidth: "80%",
+//   },
+// }));
+
+// const ContactContainer = styled(Box)(({ theme }) => ({
+//   display: "flex",
+//   flexDirection: "column",
+//   gap: theme.spacing(2),
+//   marginTop: theme.spacing(1.5),
+// }));
+
+// const ContactItem = styled(motion.a)(({ theme }) => ({
+//   display: "flex",
+//   alignItems: "center",
+//   gap: theme.spacing(1.5),
+//   textDecoration: "none",
+//   color: theme.palette.text.secondary,
+//   padding: theme.spacing(1.5, 2),
+//   borderRadius: 10,
+//   background: "rgba(255, 255, 255, 0.7)",
+//   border: "1px solid rgba(110, 69, 226, 0.15)",
+//   transition: "all 0.3s ease",
+//   boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+//   "&:hover": {
+//     background: "rgba(255, 255, 255, 0.9)",
+//     transform: "translateY(-2px)",
+//     boxShadow: "0 4px 12px rgba(110, 69, 226, 0.15)",
+//     color: theme.palette.text.primary,
+//   },
+//   [theme.breakpoints.down("sm")]: {
+//     padding: theme.spacing(1.25, 1.75),
+//   },
+// }));
+
+// const ContactIcon = styled(Box)(({ theme }) => ({
+//   display: "flex",
+//   alignItems: "center",
+//   justifyContent: "center",
+//   width: 40,
+//   height: 40,
+//   borderRadius: "50%",
+//   background: "linear-gradient(135deg, #FF6B8B 0%, #6E45E2 100%)",
+//   color: "white",
+//   flexShrink: 0,
+//   [theme.breakpoints.down("sm")]: {
+//     width: 36,
+//     height: 36,
+//   },
+// }));
+
+// const ContactText = styled(Typography)(({ theme }) => ({
+//   fontSize: "1.05rem",
+//   fontWeight: 500,
+//   [theme.breakpoints.down("sm")]: {
+//     fontSize: "0.95rem",
+//   },
+// }));
+
+// const PhoneNumber = styled("span")({
+//   color: "#6E45E2",
+//   fontWeight: 600,
+// });
+
+// export default function Branches() {
+//   const theme = useTheme();
+//   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+//   const [expanded, setExpanded] = useState(null);
+
+//   const handleChange = (panel) => (_, isExpanded) => {
+//     setExpanded(isExpanded ? panel : null);
+//   };
+
+//   const getShortenedName = (name) => {
+//     if (!isMobile) return name;
+//     return name
+//       .replace("Institute", "Institute")
+//       .replace("Physiotherapy", "Physiotherapy")
+//       .replace("Centre", "Centre");
+//   };
+
+//   return (
+//     <MainContainer>
+//       <SectionTitle variant="h2" component="h2" gutterBottom>
+//         Our Branches
+//       </SectionTitle>
+
+//       {BRANCHES_DATA.map((branch) => (
+//         <GradientAccordion
+//           key={branch.id}
+//           expanded={expanded === `panel${branch.id}`}
+//           onChange={handleChange(`panel${branch.id}`)}
+//           TransitionProps={{ unmountOnExit: true }}
+//         >
+//           <GradientAccordionSummary
+//             expandIcon={<ExpandMore style={{ color: "white" }} />}
+//             aria-controls={`panel${branch.id}-content`}
+//             id={`panel${branch.id}-header`}
+//           >
+//             <BranchName variant="h6" component="h3">
+//               {getShortenedName(branch.name)}
+//             </BranchName>
+//           </GradientAccordionSummary>
+          
+//           <GradientAccordionDetails>
+//             <AddressText>
+//               <strong>Address:</strong> {branch.address}
+//             </AddressText>
+            
+//             <ContactContainer>
+//               <ContactItem
+//                 href={`https://wa.me/${branch.phone}`}
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 whileHover={{ scale: 1.02 }}
+//                 whileTap={{ scale: 0.98 }}
+//               >
+//                 <ContactIcon>
+//                   <WhatsApp fontSize="small" />
+//                 </ContactIcon>
+//                 <ContactText>
+//                   Chat on <PhoneNumber>WhatsApp</PhoneNumber>
+//                 </ContactText>
+//               </ContactItem>
+              
+//               <ContactItem
+//                 href={`tel:${branch.phone}`}
+//                 whileHover={{ scale: 1.02 }}
+//                 whileTap={{ scale: 0.98 }}
+//               >
+//                 <ContactIcon>
+//                   <Phone fontSize="small" />
+//                 </ContactIcon>
+//                 <ContactText>
+//                   Call us: <PhoneNumber>{branch.phone}</PhoneNumber>
+//                 </ContactText>
+//               </ContactItem>
+//             </ContactContainer>
+//           </GradientAccordionDetails>
+//         </GradientAccordion>
+//       ))}
+//     </MainContainer>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import { useState } from "react";
 import {
   Accordion,
@@ -373,7 +675,7 @@ import {
 import { ExpandMore, WhatsApp, Phone } from "@mui/icons-material";
 import { motion } from "framer-motion";
 
-// Constants
+// Branch data
 const BRANCHES_DATA = [
   {
     id: 1,
@@ -412,8 +714,7 @@ const MainContainer = styled("div")(({ theme }) => ({
   margin: "3.8rem auto 0",
   padding: theme.spacing(0, 2.5, 5, 2.5),
   maxWidth: "800px",
-  background:
-    "radial-gradient(circle at center, rgba(255,245,250,0.8) 0%, rgba(240,245,255,0.8) 100%)",
+  background: "radial-gradient(circle at center, rgba(255,245,250,0.8) 0%, rgba(240,245,255,0.8) 100%)",
   borderRadius: 24,
   boxShadow: "0 8px 32px rgba(110, 69, 226, 0.1)",
   [theme.breakpoints.down("md")]: {
@@ -496,10 +797,9 @@ const BranchName = styled(Typography)(({ theme }) => ({
   color: "white",
   [theme.breakpoints.down("sm")]: { 
     fontSize: "1rem",
-    whiteSpace: "nowrap",
-    overflow: "hidden",
-    textOverflow: "ellipsis",
-    maxWidth: "80%",
+    whiteSpace: "normal",
+    overflow: "visible",
+    textOverflow: "clip",
   },
 }));
 
@@ -562,21 +862,13 @@ const PhoneNumber = styled("span")({
   fontWeight: 600,
 });
 
+// Main Component
 export default function Branches() {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [expanded, setExpanded] = useState(null);
 
   const handleChange = (panel) => (_, isExpanded) => {
     setExpanded(isExpanded ? panel : null);
-  };
-
-  const getShortenedName = (name) => {
-    if (!isMobile) return name;
-    return name
-      .replace("Institute", "Institute")
-      .replace("Physiotherapy", "Physiotherapy")
-      .replace("Centre", "Centre");
   };
 
   return (
@@ -598,7 +890,7 @@ export default function Branches() {
             id={`panel${branch.id}-header`}
           >
             <BranchName variant="h6" component="h3">
-              {getShortenedName(branch.name)}
+              {branch.name}
             </BranchName>
           </GradientAccordionSummary>
           
@@ -642,12 +934,6 @@ export default function Branches() {
     </MainContainer>
   );
 }
-
-
-
-
-
-
 
 
 
