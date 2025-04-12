@@ -1688,19 +1688,20 @@ useEffect(() => {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <Typography
-              variant="h4"
-              sx={{
-                mb: 3,
-                fontWeight: 400,
-                fontFamily: "'Playfair Display', serif",
-                color: textPrimary,
-                fontSize: { xs: "1.5rem", sm: "2rem", md: "2.125rem" },
-                px: 2,
-              }}
-            >
-              &ldqo;Yoga is the journey of the self, through the self, to the self.&rdqo;
-            </Typography>
+           <Typography
+  variant="h4"
+  sx={{
+    mb: 3,
+    fontWeight: 400,
+    fontFamily: "'Playfair Display', serif",
+    color: textPrimary,
+    fontSize: { xs: "1.5rem", sm: "2rem", md: "2.125rem" },
+    px: 2,
+  }}
+>
+  &ldquo;Yoga is the journey of the self, through the self, to the self.&rdquo;
+</Typography>
+
             <Typography
               variant="subtitle1"
               sx={{
