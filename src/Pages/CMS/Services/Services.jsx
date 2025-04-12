@@ -807,7 +807,7 @@ const ServicesComponent = () => {
   const theme = useTheme();
   const isXs = useMediaQuery(theme.breakpoints.down('sm'));
   const isSm = useMediaQuery(theme.breakpoints.between('sm', 'md'));
-  const isMd = useMediaQuery(theme.breakpoints.up('md'));
+  // const isMd = useMediaQuery(theme.breakpoints.up('md'));
 
   const services = [
     {

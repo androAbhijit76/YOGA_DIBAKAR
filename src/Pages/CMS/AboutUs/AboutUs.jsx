@@ -1842,18 +1842,28 @@
 
 
 
-import React from 'react';
-import { Box, Breadcrumbs, Typography, Grid, CardMedia, Button, useTheme, useMediaQuery } from "@mui/material";
-import { Link } from "react-router-dom";
-import HomeIcon from "@mui/icons-material/Home";
-import WhatshotIcon from "@mui/icons-material/Whatshot";
-import YogaIcon from '@mui/icons-material/SelfImprovement';
-import SpaIcon from '@mui/icons-material/Spa';
-import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
-import EmojiNatureIcon from '@mui/icons-material/EmojiNature';
+// import React from 'react';
+// import {  useMediaQuery } from "@mui/material";
+// import { Link } from "react-router-dom";
+// import HomeIcon from "@mui/icons-material/Home";
+// import WhatshotIcon from "@mui/icons-material/Whatshot";
+// import YogaIcon from '@mui/icons-material/SelfImprovement';
+// import SpaIcon from '@mui/icons-material/Spa';
+// import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+// import EmojiNatureIcon from '@mui/icons-material/EmojiNature';  
+
+
+
+
 import { motion } from "framer-motion"; 
 import { useEffect } from 'react';
 import Animated from '../Animated/Animated';
+import Founders from '../Founders/Founders';
+import ChooseIns from '../ChooseIns/ChooseIns';
+import Gallery from "../Gallery/Gallery";
+import Philosophy from "../Philosophy/Philosophy";
+import QuoteSec from "../QuoteSec/QuoteSec";
+import HeroAbout from "../HeroAbout/HeroAbout";
 
 // Animation variants
 const containerVariants = {
@@ -1866,150 +1876,150 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut"
-    }
-  }
-};
+// const itemVariants = {
+//   hidden: { y: 20, opacity: 0 },
+//   visible: {
+//     y: 0,
+//     opacity: 1,
+//     transition: {
+//       duration: 0.6,
+//       ease: "easeOut"
+//     }
+//   }
+// };
 
-const fadeIn = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-      ease: "easeIn"
-    }
-  }
-};
+// const fadeIn = {
+//   hidden: { opacity: 0 },
+//   visible: {
+//     opacity: 1,
+//     transition: {
+//       duration: 0.8,
+//       ease: "easeIn"
+//     }
+//   }
+// };
 
-const scaleUp = {
-  hidden: { scale: 0.95, opacity: 0 },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: "backOut"
-    }
-  }
-};
+// const scaleUp = {
+//   hidden: { scale: 0.95, opacity: 0 },
+//   visible: {
+//     scale: 1,
+//     opacity: 1,
+//     transition: {
+//       duration: 0.5,
+//       ease: "backOut"
+//     }
+//   }
+// };
 
-const slideInLeft = {
-  hidden: { x: -50, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut"
-    }
-  }
-};
+// const slideInLeft = {
+//   hidden: { x: -50, opacity: 0 },
+//   visible: {
+//     x: 0,
+//     opacity: 1,
+//     transition: {
+//       duration: 0.6,
+//       ease: "easeOut"
+//     }
+//   }
+// };
 
-const slideInRight = {
-  hidden: { x: 50, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut"
-    }
-  }
-};
+// const slideInRight = {
+//   hidden: { x: 50, opacity: 0 },
+//   visible: {
+//     x: 0,
+//     opacity: 1,
+//     transition: {
+//       duration: 0.6,
+//       ease: "easeOut"
+//     }
+//   }
+// };
 
-const hoverScale = {
-  scale: 1.03,
-  transition: { duration: 0.3 }
-};
+// const hoverScale = {
+//   scale: 1.03,
+//   transition: { duration: 0.3 }
+// };
 
-const tapScale = {
-  scale: 0.98
-};
+// const tapScale = {
+//   scale: 0.98
+// };
 
 export default function AboutUs() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
-  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
+  // const theme = useTheme();
+  // const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  // const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+  // const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
 
-  const features = [
-    {
-      icon: <YogaIcon fontSize="large" color="primary" />,
-      title: "Holistic Approach",
-      description: "We integrate mind, body and spirit in all our teachings"
-    },
-    {
-      icon: <SpaIcon fontSize="large" color="primary" />,
-      title: "Serene Environment",
-      description: "Our space is designed for peace and tranquility"
-    },
-    {
-      icon: <FitnessCenterIcon fontSize="large" color="primary" />,
-      title: "Expert Instructors",
-      description: "Learn from certified yoga masters with decades of experience"
-    },
-    {
-      icon: <EmojiNatureIcon fontSize="large" color="primary" />,
-      title: "Natural Healing",
-      description: "Harness the power of nature in your wellness journey"
-    }
-  ];
+  // const features = [
+  //   {
+  //     icon: <YogaIcon fontSize="large" color="primary" />,
+  //     title: "Holistic Approach",
+  //     description: "We integrate mind, body and spirit in all our teachings"
+  //   },
+  //   {
+  //     icon: <SpaIcon fontSize="large" color="primary" />,
+  //     title: "Serene Environment",
+  //     description: "Our space is designed for peace and tranquility"
+  //   },
+  //   {
+  //     icon: <FitnessCenterIcon fontSize="large" color="primary" />,
+  //     title: "Expert Instructors",
+  //     description: "Learn from certified yoga masters with decades of experience"
+  //   },
+  //   {
+  //     icon: <EmojiNatureIcon fontSize="large" color="primary" />,
+  //     title: "Natural Healing",
+  //     description: "Harness the power of nature in your wellness journey"
+  //   }
+  // ];
 
-  const galleryItems = [
-    {
-      image: "/img/g1.jpg",
-      title: "Meditation Hall",
-      description: "Our peaceful meditation space with natural lighting"
-    },
-    {
-      image: "/img/g3.jpg",
-      title: "Yoga Studio",
-      description: "Main practice area with premium mats and props"
-    },
-    {
-      image: "/img/g2.jpg",
-      title: "Outdoor Shala",
-      description: "Open-air practice space surrounded by nature"
-    },
-    {
-      image: "/img/g4.jpg",
-      title: "Reception Area",
-      description: "Welcoming entrance with Ayurvedic tea station"
-    },
-    {
-      image: "/img/g5.jpg",
-      title: "Teacher Training",
-      description: "Certification programs with expert instructors"
-    },
-    {
-      image: "/img/prize.jpg",
-      title: "Achievements",
-      description: "Recognitions for our excellence in yoga education"
-    },
-    {
-      image: "/img/g7.jpg",
-      title: "Group Sessions",
-      description: "Community classes for all skill levels"
-    },
-    {
-      image: "/img/g8.jpg",
-      title: "Private Lessons",
-      description: "One-on-one instruction tailored to your needs"
-    },
-    {
-      image: "/img/g11.jpg",
-      title: "Wellness Library",
-      description: "Resource center with yoga philosophy texts"
-    }
-  ];  
+  // const galleryItems = [
+  //   {
+  //     image: "/img/g1.jpg",
+  //     title: "Meditation Hall",
+  //     description: "Our peaceful meditation space with natural lighting"
+  //   },
+  //   {
+  //     image: "/img/g3.jpg",
+  //     title: "Yoga Studio",
+  //     description: "Main practice area with premium mats and props"
+  //   },
+  //   {
+  //     image: "/img/g2.jpg",
+  //     title: "Outdoor Shala",
+  //     description: "Open-air practice space surrounded by nature"
+  //   },
+  //   {
+  //     image: "/img/g4.jpg",
+  //     title: "Reception Area",
+  //     description: "Welcoming entrance with Ayurvedic tea station"
+  //   },
+  //   {
+  //     image: "/img/g5.jpg",
+  //     title: "Teacher Training",
+  //     description: "Certification programs with expert instructors"
+  //   },
+  //   {
+  //     image: "/img/prize.jpg",
+  //     title: "Achievements",
+  //     description: "Recognitions for our excellence in yoga education"
+  //   },
+  //   {
+  //     image: "/img/g7.jpg",
+  //     title: "Group Sessions",
+  //     description: "Community classes for all skill levels"
+  //   },
+  //   {
+  //     image: "/img/g8.jpg",
+  //     title: "Private Lessons",
+  //     description: "One-on-one instruction tailored to your needs"
+  //   },
+  //   {
+  //     image: "/img/g11.jpg",
+  //     title: "Wellness Library",
+  //     description: "Resource center with yoga philosophy texts"
+  //   }
+  // ];  
  
 
 
@@ -2036,13 +2046,27 @@ export default function AboutUs() {
 
 
   return (
-    <motion.div
+   <>
+   
+   <motion.div
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      {/* Hero Section */}
-      <Box
+      {/* Hero Section */}   
+
+
+
+<HeroAbout/>
+
+
+
+
+
+
+
+
+      {/* <Box
         mt={{ xs: 6, sm: 8, md: 10, lg: 12 }}
         sx={{
           width: "100%",
@@ -2106,7 +2130,7 @@ export default function AboutUs() {
           </motion.div>
 
           {/* Breadcrumbs */}
-          <motion.div
+          {/* <motion.div
             variants={fadeIn}
             style={{
               marginTop: "16px",
@@ -2137,10 +2161,22 @@ export default function AboutUs() {
             </Breadcrumbs>
           </motion.div>
         </Box>
-      </Box>
+      // </Box> 
 
-      {/* Content Section */}
-      <Box mt={5} sx={{ 
+      {/* Content Section/ Philosophy Section */}    
+
+
+
+   <Philosophy/>   
+
+
+
+
+
+
+
+
+      {/* <Box mt={5} sx={{ 
         padding: { 
           xs: 2, 
           sm: 3, 
@@ -2150,7 +2186,7 @@ export default function AboutUs() {
       }}>
         <Grid container spacing={isMobile ? 2 : 4}>
           {/* Image Card */}
-          <Grid item xs={12} md={4}>
+          {/* <Grid item xs={12} md={4}>
             <motion.div
               variants={slideInLeft}
               style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }}
@@ -2194,7 +2230,7 @@ export default function AboutUs() {
           </Grid>
 
           {/* Text Card */}
-          <Grid item xs={12} md={8}>
+          {/* <Grid item xs={12} md={8}>
             <motion.div
               variants={slideInRight}
               style={{
@@ -2242,7 +2278,7 @@ export default function AboutUs() {
                       textAlign: "justify",
                     }}
                   >
-                    At <b>Dibakar Yogarathi Institute</b>, we believe yoga is more than physical postures - it's a transformative journey that harmonizes body, mind and spirit. Nestled in the serene surroundings of Garia, Kolkata, our sanctuary offers a sacred space for self-discovery and holistic healing.
+                    At <b>Dibakar Yogarathi Institute</b>, we believe yoga is more than physical postures - it&#39;s a transformative journey that harmonizes body, mind and spirit. Nestled in the serene surroundings of Garia, Kolkata, our sanctuary offers a sacred space for self-discovery and holistic healing.
                     <br /><br />
                     Our comprehensive curriculum blends ancient wisdom with modern science, offering:
                     <ul style={{ 
@@ -2255,7 +2291,7 @@ export default function AboutUs() {
                       <li>Meditation and Pranayama masterclasses</li>
                       <li>Ayurvedic wellness workshops</li>
                     </ul>
-                    Each program is carefully crafted to honor yoga's rich tradition while addressing contemporary wellness needs. Our graduates leave not just as instructors, but as healers and guides.
+                    Each program is carefully crafted to honor yoga&#39;s rich tradition while addressing contemporary wellness needs. Our graduates leave not just as instructors, but as healers and guides.
                   </Typography>
                 </motion.div>
                 
@@ -2293,10 +2329,26 @@ export default function AboutUs() {
             </motion.div>
           </Grid>
         </Grid>
-      </Box>
+      // </Box>    
 
-      {/* Features Section */}
-      <Box mt={8} sx={{ 
+
+
+
+
+
+      {/* Features Section */}   
+
+
+
+<ChooseIns/>
+
+
+
+
+
+
+
+       {/* <Box mt={8} sx={{ 
         background: "linear-gradient(to bottom, #f8f9fa, #e9ecef)",
         py: isMobile ? 4 : 6,
         px: { xs: 2, sm: 3, md: 4 },
@@ -2397,427 +2449,31 @@ export default function AboutUs() {
             ))}
           </Grid>
         </motion.div>
-      </Box>
+      </Box>  */}
+
+      {/* <ChooseIns/> */}
 
       
 
 
+<Founders/>
 
-
-{/* Founders Section */}
-<Box mt={8} sx={{ 
-  background: "linear-gradient(to bottom, #ffffff, #f8f9fa)",
-  py: isMobile ? 4 : 8,
-  px: { xs: 2, sm: 3, md: 4 },
-  position: "relative",
-  overflow: "hidden",
-  '&::before': {
-    content: '""',
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    backgroundImage: "url('/img/yoga-pattern.png')",
-    backgroundRepeat: "repeat",
-    opacity: 0.03,
-    zIndex: 0
-  }
-}}>
-  <motion.div variants={fadeIn}>
-    <Typography
-      variant={isMobile ? "h4" : "h3"}
-      sx={{
-        fontWeight: "bold",
-        textAlign: "center",
-        color: "primary.main",
-        mb: isMobile ? 4 : 6,
-        position: "relative",
-        zIndex: 1,
-        '&::after': {
-          content: '""',
-          display: "block",
-          width: "100px",
-          height: "4px",
-          background: "linear-gradient(to right, #3f51b5, #9c27b0)",
-          margin: isMobile ? "12px auto 0" : "20px auto 0",
-          borderRadius: "4px"
-        }
-      }}
-    >
-      Our Visionary Founders
-    </Typography>
-  </motion.div>
-
-  <Grid container spacing={isMobile ? 2 : 6} sx={{ position: "relative", zIndex: 1 }}>
-    {/* Dibakar Das */}
-    <Grid item xs={12} md={6}>
-      <motion.div
-        variants={slideInLeft}
-        whileHover={{ y: -5 }}
-        style={{
-          height: "100%",
-          background: "white",
-          borderRadius: "16px",
-          overflow: "hidden",
-          boxShadow: "0 15px 30px rgba(0,0,0,0.1)",
-          display: "flex",
-          flexDirection: isMobile ? "column" : "row"
-        }}
-      >
-        <Box sx={{
-          width: isMobile ? "100%" : "40%",
-          height: isMobile ? "300px" : "auto",
-          position: "relative",
-          overflow: "hidden"
-        }}>
-          <CardMedia
-            component="img"
-            image="/img/arun.jpg" // Replace with actual image path
-            alt="Dibakar Das"
-            sx={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              transition: "transform 0.5s ease",
-              '&:hover': {
-                transform: "scale(1.05)"
-              }
-            }}
-          />
-          <Box sx={{
-            position: "absolute",
-            bottom: 0,
-            left: 0,
-            right: 0,
-            background: "linear-gradient(to top, rgba(63,81,181,0.8), transparent)",
-            color: "white",
-            p: 2,
-            textAlign: "center"
-          }}>
-            <Typography variant="h6" sx={{ fontWeight: "bold" }}>Mr. Arun Patra</Typography>
-            <Typography variant="body2">Co-Founder & Spiritual Guide</Typography>
-          </Box>
-        </Box>
-        
-        <Box sx={{
-          width: isMobile ? "100%" : "60%",
-          p: isMobile ? 2 : 3,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center"
-        }}>
-          <Box sx={{ mb: 2 }}>
-            <Typography variant="body1" color="text.secondary" sx={{ 
-              fontStyle: "italic",
-              mb: 1,
-              fontSize: isMobile ? "0.875rem" : "1rem"
-            }}>
-              "Yoga is not about touching your toes, it's about what you learn on the way down."
-            </Typography>
-          </Box>
-          
-          <Typography variant="body1" sx={{ 
-            mb: 1,
-            fontSize: isMobile ? "0.875rem" : "1rem"
-          }}>
-            <b>Education:</b> Master's in Yoga Science, RYT 500 Certified, PhD in Yogic Studies
-          </Typography>
-          
-          <Typography variant="body1" sx={{ 
-            mb: 1,
-            fontSize: isMobile ? "0.875rem" : "1rem"
-          }}>
-            <b>Achievements:</b> 
-            <ul style={{ paddingLeft: "20px", margin: "8px 0" }}>
-              <li>Gold Medalist in International Yoga Championship</li>
-              <li>Author of 3 bestselling books on Yoga Philosophy</li>
-              <li>Recipient of "Yoga Ratna" National Award</li>
-            </ul>
-          </Typography>
-          
-          <Typography variant="body1" sx={{ 
-            fontSize: isMobile ? "0.875rem" : "1rem"
-          }}>
-            <b>Contributions:</b> Developed the institute's core curriculum and meditation programs with over 20 years of teaching experience.
-          </Typography>
-          
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            style={{ alignSelf: "flex-start", marginTop: "16px" }}
-          >
-            <Button
-              variant="outlined"
-              color="primary"
-              size="small"
-              startIcon={<SpaIcon />}
-              sx={{
-                borderRadius: "20px",
-                fontWeight: "bold",
-                borderWidth: "2px",
-                '&:hover': {
-                  borderWidth: "2px"
-                }
-              }}
-            >
-              Read Biography
-            </Button>
-          </motion.div>
-        </Box>
-      </motion.div>
-    </Grid>
-
-    {/* Rupam Das */}
-    <Grid item xs={12} md={6}>
-      <motion.div
-        variants={slideInRight}
-        whileHover={{ y: -5 }}
-        style={{
-          height: "100%",
-          background: "white",
-          borderRadius: "16px",
-          overflow: "hidden",
-          boxShadow: "0 15px 30px rgba(0,0,0,0.1)",
-          display: "flex",
-          flexDirection: isMobile ? "column" : "row"
-        }}
-      >
-        <Box sx={{
-          width: isMobile ? "100%" : "40%",
-          height: isMobile ? "300px" : "auto",
-          position: "relative",
-          overflow: "hidden"
-        }}>
-          <CardMedia
-            component="img"
-            image="/img/barun.jpg" // Replace with actual image path
-            alt="Rupam Das"
-            sx={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              transition: "transform 0.5s ease",
-              '&:hover': {
-                transform: "scale(1.05)"
-              }
-            }}
-          />
-          <Box sx={{
-            position: "absolute",
-            bottom: 0,
-            left: 0,
-            right: 0,
-            background: "linear-gradient(to top, rgba(156,39,176,0.8), transparent)",
-            color: "white",
-            p: 2,
-            textAlign: "center"
-          }}>
-            <Typography variant="h6" sx={{ fontWeight: "bold" }}>Mr. Varun Patra</Typography>
-            <Typography variant="body2">Co-Founder & Therapeutic Specialist</Typography>
-          </Box>
-        </Box>
-        
-        <Box sx={{
-          width: isMobile ? "100%" : "60%",
-          p: isMobile ? 2 : 3,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center"
-        }}>
-          <Box sx={{ mb: 2 }}>
-            <Typography variant="body1" color="text.secondary" sx={{ 
-              fontStyle: "italic",
-              mb: 1,
-              fontSize: isMobile ? "0.875rem" : "1rem"
-            }}>
-              "Healing begins when we listen to our body with compassion."
-            </Typography>
-          </Box>
-          
-          <Typography variant="body1" sx={{ 
-            mb: 1,
-            fontSize: isMobile ? "0.875rem" : "1rem"
-          }}>
-            <b>Education:</b> MD in Yoga Therapy, Certified Ayurvedic Practitioner, MSc in Sports Science
-          </Typography>
-          
-          <Typography variant="body1" sx={{ 
-            mb: 1,
-            fontSize: isMobile ? "0.875rem" : "1rem"
-          }}>
-            <b>Achievements:</b> 
-            <ul style={{ paddingLeft: "20px", margin: "8px 0" }}>
-              <li>Pioneer in Yoga for Chronic Pain Management</li>
-              <li>Developed "Yogic Healing" methodology</li>
-              <li>Featured in "Top 40 Under 40" Wellness Leaders</li>
-            </ul>
-          </Typography>
-          
-          <Typography variant="body1" sx={{ 
-            fontSize: isMobile ? "0.875rem" : "1rem"
-          }}>
-            <b>Contributions:</b> Created the institute's therapeutic yoga programs and established partnerships with medical institutions.
-          </Typography>
-          
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            style={{ alignSelf: "flex-start", marginTop: "16px" }}
-          >
-            <Button
-              variant="outlined"
-              color="secondary"
-              size="small"
-              startIcon={<EmojiNatureIcon />}
-              sx={{
-                borderRadius: "20px",
-                fontWeight: "bold",
-                borderWidth: "2px",
-                '&:hover': {
-                  borderWidth: "2px"
-                }
-              }}
-            >
-              Read Biography
-            </Button>
-          </motion.div>
-        </Box>
-      </motion.div>
-    </Grid>
-  </Grid>
-
-  {/* Founders' Joint Message */}
-  <motion.div 
-    variants={scaleUp}
-    style={{
-      maxWidth: "900px",
-      margin: "40px auto 0",
-      background: "linear-gradient(135deg, #3f51b5, #9c27b0)",
-      borderRadius: "16px",
-      padding: isMobile ? "20px" : "30px",
-      boxShadow: "0 20px 40px rgba(63,81,181,0.2)",
-      color: "white",
-      position: "relative",
-      zIndex: 1,
-      overflow: "hidden",
-      '&::before': {
-        content: '""',
-        position: "absolute",
-        top: "-50px",
-        right: "-50px",
-        width: "150px",
-        height: "150px",
-        background: "rgba(255,255,255,0.1)",
-        borderRadius: "50%"
-      }
-    }}
-    sx={{
-      '&::after': {
-        content: '""',
-        position: "absolute",
-        bottom: "-30px",
-        left: "-30px",
-        width: "100px",
-        height: "100px",
-        background: "rgba(255,255,255,0.1)",
-        borderRadius: "50%"
-      }
-    }}
-  >
-    <Typography variant={isMobile ? "h5" : "h4"} sx={{ 
-      fontWeight: "bold", 
-      mb: 3,
-      textAlign: "center",
-      position: "relative",
-      zIndex: 2
-    }}>
-      Our Shared Vision
-    </Typography>
-    
-    <Typography variant={isMobile ? "body1" : "h6"} sx={{ 
-      mb: 3,
-      fontStyle: "italic",
-      textAlign: "center",
-      position: "relative",
-      zIndex: 2,
-      fontSize: isMobile ? "0.875rem" : "1.1rem"
-    }}>
-      "Together we envisioned Dibakar Yogarathi Institute as a sanctuary where traditional wisdom meets modern wellness, creating a transformative experience for every seeker."
-    </Typography>
-    
-    <Box sx={{ 
-      display: "flex", 
-      justifyContent: "center",
-      position: "relative",
-      zIndex: 2
-    }}>
-      <motion.div
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <Button
-          variant="contained"
-          color="primary"
-          size={isMobile ? "medium" : "large"}
-          endIcon={<WhatshotIcon />}
-          sx={{
-            borderRadius: "20px",
-            px: 4,
-            fontWeight: "bold",
-            background: "white",
-            color: "primary.main",
-            '&:hover': {
-              background: "white",
-              boxShadow: "0 10px 20px rgba(0,0,0,0.2)"
-            }
-          }}
-        >
-          Meet Our Team
-        </Button>
-      </motion.div>
-    </Box>
-    
-    <Box sx={{
-      position: "absolute",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%, -50%)",
-      opacity: 0.1,
-      zIndex: 1
-    }}>
-      <SpaIcon sx={{ fontSize: "150px" }} />
-    </Box>
-  </motion.div>
-</Box>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 
 <Animated/>
 
 
-    {/* Gallery Section */}
-<Box mt={8} sx={{ 
+    {/* Gallery Section */}   
+
+
+
+    <Gallery/>   
+
+
+
+
+
+
+{/* <Box mt={8} sx={{ 
   padding: { 
     xs: 2, 
     sm: 3, 
@@ -2889,7 +2545,7 @@ export default function AboutUs() {
               />
               
               {/* Hover Overlay with Text */}
-              <Box
+              {/* <Box
                 sx={{
                   position: "absolute",
                   top: 0,
@@ -2943,10 +2599,19 @@ export default function AboutUs() {
       ))}
     </Grid>
   </motion.div>
-</Box>
+</Box> */}
 
-      {/* Testimonial/Quote Section */}
-      <Box mt={8} sx={{ 
+      {/* Testimonial/Quote Section */}  
+
+
+  <QuoteSec/>
+
+
+
+
+
+
+      {/* <Box mt={8} sx={{ 
         background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
         py: isMobile ? 4 : 8,
         color: "white",
@@ -2982,7 +2647,7 @@ export default function AboutUs() {
                   fontSize: isMobile ? "1.25rem" : "1.5rem"
                 }}
               >
-                "Yoga is the journey of the self, through the self, to the self."
+                &ldquo;Yoga is the journey of the self, through the self, to the self.&rdquo;
               </Typography>
             </motion.div>
             <motion.div variants={itemVariants}>
@@ -3027,8 +2692,10 @@ export default function AboutUs() {
             </motion.div>
           </motion.div>
         </motion.div>
-      </Box>
+      </Box> */}
     </motion.div>
+   
+   </>
   );
 }
 

@@ -978,7 +978,7 @@ import {
   Grid,
   CardMedia,
   Paper,
-  useTheme,
+  // useTheme,
 } from "@mui/material";
 import { FaCheck } from "react-icons/fa";
 import { Reveal } from "react-awesome-reveal";
@@ -1020,7 +1020,7 @@ const float = keyframes`
 `;
 
 export default function Benefits() {
-  const theme = useTheme();
+  // const theme = useTheme();
 
   return (
     <Box
@@ -1147,7 +1147,7 @@ export default function Benefits() {
           }}
           variant="body1"
         >
-          Yoga is more than physical exercise - it's a sacred journey of
+          Yoga is more than physical exercise - it&#39;s a sacred journey of
           self-discovery. Through mindful movement and breath awareness, we
           awaken our highest potential.
         </Typography>

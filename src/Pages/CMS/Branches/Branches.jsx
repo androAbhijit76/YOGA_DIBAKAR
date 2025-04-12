@@ -668,8 +668,8 @@ import {
   AccordionDetails,
   Typography,
   Box,
-  useTheme,
-  useMediaQuery,
+  // useTheme,
+  // useMediaQuery,
   styled
 } from "@mui/material";
 import { ExpandMore, WhatsApp, Phone } from "@mui/icons-material";
@@ -864,7 +864,7 @@ const PhoneNumber = styled("span")({
 
 // Main Component
 export default function Branches() {
-  const theme = useTheme();
+  // const theme = useTheme();
   const [expanded, setExpanded] = useState(null);
 
   const handleChange = (panel) => (_, isExpanded) => {

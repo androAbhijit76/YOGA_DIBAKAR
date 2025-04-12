@@ -1508,7 +1508,7 @@ const Contact = () => {
           });
           form.current.reset();
         },
-        (error) => {
+        () => {
           toast.error("Failed to send the message. Please try again.", {
             position: "top-center",
             autoClose: 3000,
@@ -1699,7 +1699,7 @@ useEffect(() => {
                 px: 2,
               }}
             >
-              "Yoga is the journey of the self, through the self, to the self."
+              &ldqo;Yoga is the journey of the self, through the self, to the self.&rdqo;
             </Typography>
             <Typography
               variant="subtitle1"
@@ -1746,7 +1746,7 @@ useEffect(() => {
                     fontSize: { xs: "0.9rem", md: "1rem" }
                   }}
                 >
-                  We'd love to hear from you! Whether you're interested in our
+                  We&#39;d love to hear from you! Whether you&#39;re interested in our
                   yoga classes, have questions about our programs, or just want
                   to say hello, feel free to reach out.
                 </Typography>
