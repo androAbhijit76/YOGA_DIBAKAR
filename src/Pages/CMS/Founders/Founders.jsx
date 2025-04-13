@@ -651,7 +651,7 @@ function Founders() {
     {
       name: "Mr. Arun Patra",
       title: "Principal | Consultant of Yoga and Physiotherapy",
-      image: "/img/arun.jpg",
+      image: "/img/aru.jpg",
       quote: `"Discipline and consistency are the foundation of wellness."`,
       qualifications: "D.Y.S., M.M.W.Y.S., A.P.R.T.",
       achievements: [
@@ -668,7 +668,7 @@ function Founders() {
     {
       name: "Grand Master Mr. Barun Patra",
       title: "Vice-Principal | International Yoga Coach & Judge",
-      image: "/img/barun.jpg",
+      image: "/img/barubyoga.jpg",
       quote: `"Yoga is the journey of the self, through the self, to the self."`,
       qualifications: "D.Y.S., TTC 200 HR (India), TTC 300 HR (Vietnam)",
       achievements: [
@@ -748,7 +748,7 @@ function Founders() {
               {/* Image Block */}
                <Box sx={{
                 width: isMobile ? "100%" : "40%",
-                height: isMobile ? "300px" : "auto",
+                height: isMobile ? "400px" : "372px",
                 position: "relative",
                 overflow: "hidden"
               }}>
