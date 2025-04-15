@@ -62,7 +62,9 @@ export default function SocialMedia() {
                   platform: "WhatsApp",
                   icon: <WhatsAppIcon fontSize="large" />,
                   color: "#25D366",
-                  link: "https://wa.me/919339058372",
+                  link: "https://wa.me/+919339058372",  
+                
+               
                 },
               ].map((social, index) => (
                 <Grid item xs={6} sm={3} key={index}>

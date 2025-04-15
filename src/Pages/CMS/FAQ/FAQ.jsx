@@ -345,7 +345,12 @@ export default function FAQ() {
     </Box>
 
     <Box textAlign="center" mt={8}>
-      <Button variant="contained" sx={{
+      <Button variant="contained"
+      
+      href="https://wa.me/+919339058372"
+      target="_blank"
+      rel="noopener noreferrer"
+      sx={{
         px: 6,
         py: 1.5,
         borderRadius: 50,
