@@ -6,6 +6,8 @@ import Banner from "../Banner/Banner";
 import Benefits from "../Benefits/Benefits";
 import Branches from "../Branches/Branches";
 import Services from "../Services/Services";
+// import AllCoursesSection from "../AllCoursesSection/AllCoursesSection";
+// import CourseCard from "../CourseCard/CourseCard";
 // import Video from "../Viedo/Viedo";
 // import Video from "../Viedo/Viedo";
 
@@ -24,7 +26,8 @@ useEffect(() => {
     {/* <Video/> */}  
     <Services/>
     <Branches/>
-   
+   {/* <CourseCard/> */} 
+   {/* <AllCoursesSection/> */}
    </>
     
   )

@@ -1,260 +1,3 @@
-// import { Box, Grid, Typography } from "@mui/material";
-
-// export default function Banner() {
-//   return (
-//     <Box
-//       sx={{
-//         width: "100%",
-//         height: "95vh", // Full viewport height
-//         overflowX: "hidden", // Prevent scrollbars
-//         overflowY:"hidden"
-//       }}
-//     >
-//       <Grid container>
-//         <Grid
-//           item
-//           xs={12}
-//           md={12}
-//           lg={12}
-//           sx={{
-//             backgroundImage: `url('/img/banner1.jpg')`, // Correct path
-//             backgroundRepeat: "no-repeat",
-//             backgroundSize: "cover", // Ensures the image covers the entire container
-//             backgroundPosition: "center", // Centers the image
-//             height: "100vh", // Full viewport height
-//             display: "flex",
-//             justifyContent: "center",
-//             alignItems: "center",
-//             flexDirection: "column",
-//           }}
-//         >
-//           <Typography
-//             variant="h4"
-//             sx={{
-//               color: "white",
-//               justifyContent:"left",
-//               fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem", lg: "3rem" }, // Responsive font size
-//               fontWeight: "bold",
-//               textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)", // Add text shadow for better readability
-//             }}
-//           >
-//             WELCOME TO DIBAKAR YOGARATHI INSTITUTE
-//           </Typography>
-
-//         </Grid>
-//       </Grid>
-//     </Box>
-//   );
-// }   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import { Box, Grid, Typography } from "@mui/material";
-
-// export default function Banner() {
-//   return (
-//     <Box
-//       sx={{
-//         width: "100%",
-//         height: "95vh", // Full viewport height
-//         overflowX: "hidden", // Prevent horizontal scrollbars
-//         overflowY: "hidden", // Prevent vertical scrollbars
-//       }}
-//     >
-//       <Grid container>
-//         <Grid
-//           item
-//           xs={12}
-//           md={12}
-//           lg={12}
-//           sx={{
-//             backgroundImage: `url('/img/banner1.jpg')`, // Correct path
-//             backgroundRepeat: "no-repeat",
-//             backgroundSize: "cover", // Ensures the image covers the entire container
-//             backgroundPosition: "center", // Centers the image
-//             height: "95vh", // Full viewport height
-//             display: "flex",
-//             justifyContent: "center",
-//             alignItems: "center",
-//             flexDirection: "column",
-//           }}
-//         >
-//           <Typography
-//             variant="h4"
-//             sx={{
-//               color: "white",
-//               textAlign: "center",
-//               fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem", lg: "3rem" }, // Responsive font size
-//               fontWeight: "bold",
-//               textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)", // Add text shadow for better readability
-//             }}
-//           >
-//             WELCOME TO{" "}
-//             <Box
-//               component="span"
-//               sx={{
-//                 color: "#FFD700", // Gold color for "DIBAKAR"
-//                 fontSize: { xs: "1.8rem", sm: "2.3rem", md: "2.8rem", lg: "3.3rem" }, // Larger font size for emphasis
-//               }}
-//             >
-//               DIBAKAR
-//             </Box>{" "}
-//             <Box
-//               component="span"
-//               sx={{
-//                 color: "#00FF00", // Green color for "YOGA"
-//                 fontSize: { xs: "1.8rem", sm: "2.3rem", md: "2.8rem", lg: "3.3rem" }, // Larger font size for emphasis
-//               }}
-//             >
-//               YOGA
-//             </Box>{" "}
-//             <Box
-//               component="span"
-//               sx={{
-//                 color: "#FF4500", // OrangeRed color for "RATHI"
-//                 fontSize: { xs: "1.8rem", sm: "2.3rem", md: "2.8rem", lg: "3.3rem" }, // Larger font size for emphasis
-//               }}
-//             >
-//               RATHI
-//             </Box>{" "}
-//             <Box
-//               component="span"
-//               sx={{
-//                 color: "#1E90FF", // DodgerBlue color for "INSTITUTE"
-//                 fontSize: { xs: "1.8rem", sm: "2.3rem", md: "2.8rem", lg: "3.3rem" }, // Larger font size for emphasis
-//               }}
-//             >
-//               INSTITUTE
-//             </Box>
-//           </Typography>
-//         </Grid>
-//       </Grid>
-//     </Box>
-//   );
-// }    
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import { Box, Grid, Typography } from "@mui/material";
-
-// export default function Banner() {
-//   return (
-//     <Box
-//       sx={{
-//         width: "100%",
-//         height: "95vh", // Full viewport height
-//         overflowX: "hidden", // Prevent horizontal scrollbars
-//         overflowY: "hidden", // Prevent vertical scrollbars
-//       }}
-//     >
-//       <Grid container>
-//         <Grid
-//           item
-//           xs={12}
-//           md={12}
-//           lg={12}
-//           sx={{
-//             backgroundImage: `url('/img/banner1.jpg')`, // Correct path
-//             backgroundRepeat: "no-repeat",
-//             backgroundSize: "cover", // Ensures the image covers the entire container
-//             backgroundPosition: "center", // Centers the image
-//             height: "95vh", // Full viewport height
-//             display: "flex",
-//             justifyContent: "flex-start", // Align content to the left
-//             alignItems: "center", // Center vertically
-//             pl: { xs: 2, sm: 4, md: 6, lg: 8 }, // Add left padding for better spacing
-//           }}
-//         >
-//           <Typography
-//             variant="h4"
-//             sx={{
-//               color: "white",
-//               textAlign: "left", // Align text to the left
-//               fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem", lg: "3rem" }, // Responsive font size
-//               fontWeight: "bold",
-//               textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)", // Add text shadow for better readability
-//             }}
-//           >
-//             WELCOME TO{" "}
-//             <Box
-//               component="span"
-//               sx={{
-//                 color: "#FFD700", // Gold color for "DIBAKAR"
-//                 fontSize: { xs: "1.8rem", sm: "2.3rem", md: "2.8rem", lg: "3.3rem" }, // Larger font size for emphasis
-//               }}
-//             >
-//               DIBAKAR
-//             </Box>{" "}
-//             <Box
-//               component="span"
-//               sx={{
-//                 color: "#00FF00", // Green color for "YOGA"
-//                 fontSize: { xs: "1.8rem", sm: "2.3rem", md: "2.8rem", lg: "3.3rem" }, // Larger font size for emphasis
-//               }}
-//             >
-//               YOGA
-//             </Box>{" "}
-//             <Box
-//               component="span"
-//               sx={{
-//                 color: "#FF4500", // OrangeRed color for "RATHI"
-//                 fontSize: { xs: "1.8rem", sm: "2.3rem", md: "2.8rem", lg: "3.3rem" }, // Larger font size for emphasis
-//               }}
-//             >
-//               RATHI
-//             </Box>{" "}
-//             <Box
-//               component="span"
-//               sx={{
-//                 color: "#1E90FF", // DodgerBlue color for "INSTITUTE"
-//                 fontSize: { xs: "1.8rem", sm: "2.3rem", md: "2.8rem", lg: "3.3rem" }, // Larger font size for emphasis
-//               }}
-//             >
-//               INSTITUTE
-//             </Box>
-//           </Typography>
-//         </Grid>
-//       </Grid>
-//     </Box>
-//   );
-// }   
-
-
-
-
-
-
-
-
 
 
 
@@ -1234,4 +977,42 @@ export default function Banner() {
       </Grid>
     </Box>
   );
-}
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

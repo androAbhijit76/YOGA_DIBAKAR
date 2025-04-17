@@ -13,7 +13,9 @@ export default function HeroContact() {
     <Box
   sx={{
     position: "relative",
-    height: { xs: "50vh", sm: "60vh", md: "70vh" }, // Adjusted heights
+    // height: { xs: "50vh", sm: "60vh", md: "70vh" }, // Adjusted heights  
+    height: { xs: "60vh", sm: "70vh", md: "80vh", lg: "90vh" },
+
     minHeight: { xs: 300, sm: 400 }, // Added minimum heights
     overflow: "hidden",
     display: "flex",
