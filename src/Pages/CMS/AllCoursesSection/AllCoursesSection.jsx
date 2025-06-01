@@ -427,7 +427,7 @@ import {
     {
       title: 'Massage Therapy Certification',
       duration: '3 Months',
-      image: 'https://images.unsplash.com/photo-1591348278863-a8fb3887e2aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      image: '/img/massage.jpg',
       rating: 4.5,
       reviews: 89,
       category: 'Therapy',
@@ -440,7 +440,7 @@ import {
     {
       title: 'Professional Physiotherapy',
       duration: '6 Months',
-      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      image: '/img/physio.jpg',
       rating: 4.7,
       reviews: 156,
       category: 'Medical',
@@ -453,7 +453,7 @@ import {
     {
       title: 'Diploma in Yoga Therapy',
       duration: '2 Years',
-      image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      image: '/img/yogas.jpg',
       rating: 4.9,
       reviews: 210,
       category: 'Yoga',
