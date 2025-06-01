@@ -393,7 +393,7 @@ import {
     },
   }));
   
-  const CourseMedia = styled('div')(({ theme, image }) => ({
+  const CourseMedia = styled('div')(({  image }) => ({
     height: '200px',
     backgroundImage: `url(${image})`,
     backgroundSize: 'cover',
@@ -414,12 +414,12 @@ import {
     {
       title: 'Yoga Teacher Training',
       duration: '6 Months',
-      image: 'https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      image: '/img/training1.jpg',
       rating: 4.8,
       reviews: 124,
       category: 'Yoga',
-      instructor: 'Priya Sharma',
-      instructorAvatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+      // instructor: 'Priya Sharma',
+      // instructorAvatar: 'https://randomuser.me/api/portraits/women/44.jpg',
       color: '#6366F1', // Indigo
       students: 85,
       level: 'Intermediate'
@@ -431,8 +431,8 @@ import {
       rating: 4.5,
       reviews: 89,
       category: 'Therapy',
-      instructor: 'Arjun Patel',
-      instructorAvatar: 'https://randomuser.me/api/portraits/men/32.jpg',
+      // instructor: 'Arjun Patel',
+      // instructorAvatar: 'https://randomuser.me/api/portraits/men/32.jpg',
       color: '#10B981', // Emerald
       students: 62,
       level: 'Beginner'
@@ -444,8 +444,8 @@ import {
       rating: 4.7,
       reviews: 156,
       category: 'Medical',
-      instructor: 'Dr. Neha Gupta',
-      instructorAvatar: 'https://randomuser.me/api/portraits/women/68.jpg',
+      // instructor: 'Dr. Neha Gupta',
+      // instructorAvatar: 'https://randomuser.me/api/portraits/women/68.jpg',
       color: '#3B82F6', // Blue
       students: 112,
       level: 'Advanced'
@@ -457,8 +457,8 @@ import {
       rating: 4.9,
       reviews: 210,
       category: 'Yoga',
-      instructor: 'Ravi Mishra',
-      instructorAvatar: 'https://randomuser.me/api/portraits/men/75.jpg',
+      // instructor: 'Ravi Mishra',
+      // instructorAvatar: 'https://randomuser.me/api/portraits/men/75.jpg',
       color: '#F59E0B', // Amber
       students: 94,
       level: 'Professional'
@@ -466,12 +466,12 @@ import {
     {
       title: 'Judicial Training Program',
       duration: '3 Months',
-      image: 'https://images.unsplash.com/photo-1589984662646-e7b2e4962f18?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      image: '/img/judges.jpg',
       rating: 4.3,
       reviews: 67,
       category: 'Professional',
-      instructor: 'Justice Verma',
-      instructorAvatar: 'https://randomuser.me/api/portraits/men/82.jpg',
+      // instructor: 'Justice Verma',
+      // instructorAvatar: 'https://randomuser.me/api/portraits/men/82.jpg',
       color: '#EF4444', // Red
       students: 48,
       level: 'Expert'
@@ -483,8 +483,8 @@ import {
       rating: 4.6,
       reviews: 92,
       category: 'Wellness',
-      instructor: 'Ananya Desai',
-      instructorAvatar: 'https://randomuser.me/api/portraits/women/63.jpg',
+      // instructor: 'Ananya Desai',
+      // instructorAvatar: 'https://randomuser.me/api/portraits/women/63.jpg',
       color: '#8B5CF6', // Violet
       students: 76,
       level: 'Intermediate'
@@ -605,7 +605,7 @@ import {
                     
                     <CardContent sx={{ p: 3, pb: 2 }}>
                       <Stack direction="row" spacing={1.5} alignItems="center" mb={2}>
-                        <Avatar 
+                        {/* <Avatar 
                           src={course.instructorAvatar} 
                           sx={{ 
                             width: 44, 
@@ -613,14 +613,14 @@ import {
                             border: `2px solid ${course.color}`,
                             boxShadow: `0 2px 8px ${course.color}40`
                           }} 
-                        />
+                        /> */}
                         <Box>
-                          <Typography variant="subtitle1" sx={{ fontWeight: 700, lineHeight: 1.3 }}>
+                          {/* <Typography variant="subtitle1" sx={{ fontWeight: 700, lineHeight: 1.3 }}>
                             {course.instructor}
-                          </Typography>
-                          <Typography variant="caption" sx={{ color: 'text.secondary', fontWeight: 500 }}>
+                          </Typography> */}
+                          {/* <Typography variant="caption" sx={{ color: 'text.secondary', fontWeight: 500 }}>
                             Senior Instructor
-                          </Typography>
+                          </Typography> */}
                         </Box>
                       </Stack>
                       

@@ -6,6 +6,8 @@ import Banner from "../Banner/Banner";
 import Benefits from "../Benefits/Benefits";
 import Branches from "../Branches/Branches";
 import Services from "../Services/Services";
+import Teachers from "../Teachers/Teachers";
+import YogaTypes from "../YogaTypes/YogaTypes";
 // import AllCoursesSection from "../AllCoursesSection/AllCoursesSection";
 // import CourseCard from "../CourseCard/CourseCard";
 // import Video from "../Viedo/Viedo";
@@ -25,9 +27,12 @@ useEffect(() => {
     {/* <Animated/> */} 
     {/* <Video/> */}  
     <Services/>
-    <Branches/>
+    
    {/* <CourseCard/> */} 
-   {/* <AllCoursesSection/> */}
+   {/* <AllCoursesSection/> */}   
+   <YogaTypes/> 
+   <Branches/>
+   <Teachers/>
    </>
     
   )

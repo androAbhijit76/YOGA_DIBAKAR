@@ -21,7 +21,36 @@
         publicKey: "o5biHbQnnVZOktGRF",
       });
    })();
+</script> -->    
+
+
+<!-- <script>
+  let lastScrollTop = 0;
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll <= 0) {
+      header.classList.remove("hidden");
+      header.classList.add("visible");
+      return;
+    }
+
+    if (currentScroll > lastScrollTop) {
+      // Scrolling down
+      header.classList.remove("visible");
+      header.classList.add("hidden");
+    } else {
+      // Scrolling up
+      header.classList.remove("hidden");
+      header.classList.add("visible");
+    }
+
+    lastScrollTop = currentScroll;
+  });
 </script> -->
+
 
   </body>
 </html>

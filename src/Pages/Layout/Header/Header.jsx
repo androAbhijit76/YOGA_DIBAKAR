@@ -135,7 +135,7 @@
 
 
 
-
+//    1st  header code
 
 
 import { useState, useEffect } from "react";
@@ -226,4 +226,171 @@ export default function Header() {
       </div>
     </header>
   );
-}
+}    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  2nd header code
+
+
+
+// import { useState, useEffect, useRef } from "react";
+// import { GiHamburgerMenu } from "react-icons/gi";
+// import { RxCross1 } from "react-icons/rx";
+// import { Link } from "react-router-dom";
+
+// export default function Header() {
+//   const [showMenu, setShowMenu] = useState(false);
+//   const [isVisible, setIsVisible] = useState(true);
+//   const [lastScrollY, setLastScrollY] = useState(0);
+//   const headerRef = useRef(null);
+
+//   const handleButtonToggle = () => {
+//     setShowMenu(!showMenu);
+//   };
+
+//   const closeMenu = () => {
+//     setShowMenu(false);
+//   };
+
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const currentScrollY = window.scrollY;
+      
+//       // Always show header when at top of page
+//       if (currentScrollY === 0) {
+//         setIsVisible(true);
+//         setLastScrollY(currentScrollY);
+//         return;
+//       }
+      
+//       // Close menu if open while scrolling
+//       if (showMenu) {
+//         setShowMenu(false);
+//       }
+
+//       // Determine scroll direction
+//       if (currentScrollY > lastScrollY) {
+//         // Scrolling down
+//         if (isVisible && currentScrollY > 100) { // Only hide after some scroll
+//           setIsVisible(false);
+//         }
+//       } else {
+//         // Scrolling up
+//         if (!isVisible) {
+//           setIsVisible(true);
+//         }
+//       }
+      
+//       setLastScrollY(currentScrollY);
+//     };
+
+//     window.addEventListener('scroll', handleScroll, { passive: true });
+//     return () => window.removeEventListener('scroll', handleScroll);
+//   }, [lastScrollY, isVisible, showMenu]);
+
+//   return (
+//     <header 
+//       ref={headerRef}
+//       className={`${isVisible ? 'visible' : 'hidden'} ${lastScrollY > 0 ? 'scrolled' : ''}`}
+//     >
+//       <div className="container">
+//         <div className="grid navbar-grid">
+//           <div className="logo">
+//             <img
+//               src="/img/logoyoga.png"
+//               alt="Logo"
+//               className="logo-img"
+//             />
+//           </div>
+
+//           <nav className={`menu-mobile ${showMenu ? "open" : ""}`}>
+//             <ul>
+//               <li>
+//                 <Link to="/" onClick={closeMenu}>
+//                   Home
+//                 </Link>
+//               </li>
+//               <li>
+//                 <Link to="/about-us" onClick={closeMenu}>
+//                   About
+//                 </Link>
+//               </li>
+//               <li>
+//                 <Link to="/con" onClick={closeMenu}>
+//                   Contact
+//                 </Link>
+//               </li>   
+//               <li>
+//                 <Link to="/course" onClick={closeMenu}>
+//                   Course
+//                 </Link>
+//               </li>
+//             </ul>
+//           </nav>
+
+//           <div className="ham-menu">
+//             <button onClick={handleButtonToggle}>
+//               {showMenu ? (
+//                 <RxCross1 size="3rem" />
+//               ) : (
+//                 <GiHamburgerMenu size="3.2rem" />
+//               )}
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </header>
+//   );
+// }    
+
+
+
+
+
+
+// 3rd header code   
+
+
+
+
+
+
