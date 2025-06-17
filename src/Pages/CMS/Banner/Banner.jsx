@@ -1194,6 +1194,226 @@
 
 
 
+// import { useEffect } from "react";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
+// import { Box, Grid, Typography, Button } from "@mui/material";
+
+// export default function Banner() {
+//   useEffect(() => {
+//     AOS.init({
+//       duration: 2000,
+//       once: true,
+//     });
+//   }, []);
+
+//   const handleCallNow = () => {
+//     // Check if it's a mobile device
+//     const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+//       navigator.userAgent
+//     );
+    
+//     if (isMobile) {
+//       // Directly initiate call on mobile devices
+//       window.location.href = "tel:+919339058372";
+//     } else {
+//       // On desktop: copy to clipboard and show alert
+//       navigator.clipboard.writeText("+919339058372")
+//         .then(() => {
+//           alert("Phone number +91 9339058372 copied to clipboard!");
+//         })
+//         .catch(() => {
+//           // Fallback if clipboard API fails
+//           window.open("tel:+919339058372");
+//         });
+//     }
+//   };
+
+//   return (
+//     <Box
+//       sx={{
+//         width: "100%",
+//         height: { xs: "50vh", sm: "60vh", md: "75vh", lg: "95vh" },
+//         overflowX: "hidden",
+//         overflowY: "hidden",
+//         mt: "5rem",
+//       }}
+//     >
+//       <Grid container>
+//         <Grid
+//           item
+//           xs={12}
+//           md={12}
+//           lg={12}
+//           data-aos="zoom-in-up"
+//           sx={{
+//             backgroundImage: `url('/img/pexels-elly-fairytale-3822864.jpg')`,
+//             backgroundRepeat: "no-repeat",
+//             backgroundSize: "cover",
+//             backgroundPosition: "center",
+//             height: { xs: "50vh", sm: "60vh", md: "75vh", lg: "95vh" },
+//             display: "flex",
+//             justifyContent: "flex-start",
+//             alignItems: "flex-start",
+//             pt: { xs: 10, sm: 15, md: 20, lg: 30 },
+//             pl: { xs: 2, sm: 3, md: 4, lg: 5 },
+//           }}
+//         >
+//           <Box
+//             sx={{
+//               display: "flex",
+//               flexDirection: "column",
+//               alignItems: "flex-start",
+//               gap: { xs: 1, sm: 2 },
+//               maxWidth: { md: "60%", lg: "50%" },
+//             }}
+//           >
+//             <Typography
+//               variant="h4"
+//               data-aos="zoom-in-up"
+//               sx={{
+//                 color: "white",
+//                 textAlign: "left",
+//                 fontSize: { xs: "1.2rem", sm: "1.5rem", md: "2rem", lg: "2.5rem" },
+//                 fontWeight: "bold",
+//                 textShadow: "1px 1px 3px rgba(0,0,0,0.8)",
+//               }}
+//             >
+//               WELCOME TO
+//             </Typography>
+
+//             <Typography
+//               variant="h4"
+//               data-aos="zoom-in-up"
+//               sx={{
+//                 color: "white",
+//                 textAlign: "left",
+//                 fontSize: { xs: "1.2rem", sm: "1.5rem", md: "2rem", lg: "2.5rem" },
+//                 fontWeight: "bold",
+//                 textShadow: "1px 1px 3px rgba(0,0,0,0.8)",
+//                 lineHeight: 1.2,
+//               }}
+//             >
+//               <Box
+//                 component="span"
+//                 sx={{
+//                   color: "#800080",
+//                   fontSize: { xs: "1.5rem", sm: "1.8rem", md: "2.3rem", lg: "2.8rem" },
+//                   display: "inline-block",
+//                 }}
+//               >
+//                 DIBAKAR
+//               </Box>
+//               <br />
+//               <Box
+//                 component="span"
+//                 sx={{
+//                   color: "#800080",
+//                   fontSize: { xs: "1.5rem", sm: "1.8rem", md: "2.3rem", lg: "2.8rem" },
+//                   display: "inline-block",
+//                 }}
+//               >
+//                 YOGA
+//               </Box>{" "}
+//               <Box
+//                 component="span"
+//                 sx={{
+//                   color: "#800080",
+//                   fontSize: { xs: "1.5rem", sm: "1.8rem", md: "2.3rem", lg: "2.8rem" },
+//                   display: "inline-block",
+//                 }}
+//               >
+//                 RATHI
+//               </Box>
+//             </Typography>
+
+//             <Typography
+//               variant="h4"
+//               data-aos="zoom-in-up"
+//               sx={{
+//                 color: "white",
+//                 textAlign: "left",
+//                 fontSize: { xs: "1.2rem", sm: "1.5rem", md: "2rem", lg: "2.5rem" },
+//                 fontWeight: "bold",
+//                 textShadow: "1px 1px 3px rgba(0,0,0,0.8)",
+//                 mb: { xs: 1, sm: 2 },
+//               }}
+//             >
+//               <Box
+//                 component="span"
+//                 sx={{
+//                   color: "#1E90FF",
+//                   fontSize: { xs: "1.5rem", sm: "1.8rem", md: "2.3rem", lg: "2.8rem" },
+//                 }}
+//               >
+//                 INSTITUTE
+//               </Box>
+//             </Typography>
+
+//             <Button
+//               variant="contained"
+//               data-aos="zoom-in-up"
+//               onClick={handleCallNow}
+//               sx={{
+//                 mt: { xs: 1, sm: 2 },
+//                 backgroundColor: "#4CAF50",
+//                 color: "white",
+//                 fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" },
+//                 padding: { xs: "8px 16px", sm: "10px 22px", md: "12px 28px" },
+//                 borderRadius: "8px",
+//                 fontWeight: "bold",
+//                 boxShadow: "0 4px 8px rgba(0,0,0,0.3)",
+//                 "&:hover": {
+//                   backgroundColor: "#45a049",
+//                   transform: "scale(1.05)",
+//                   boxShadow: "0 6px 12px rgba(0,0,0,0.4)",
+//                 },
+//                 transition: "all 0.3s ease",
+//               }}
+//             >
+//               Call Now: +91 9339058372
+//             </Button>
+//           </Box>
+//         </Grid>
+//       </Grid>
+//     </Box>
+//   );
+// }   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -1208,22 +1428,18 @@ export default function Banner() {
   }, []);
 
   const handleCallNow = () => {
-    // Check if it's a mobile device
     const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
     );
     
     if (isMobile) {
-      // Directly initiate call on mobile devices
       window.location.href = "tel:+919339058372";
     } else {
-      // On desktop: copy to clipboard and show alert
       navigator.clipboard.writeText("+919339058372")
         .then(() => {
           alert("Phone number +91 9339058372 copied to clipboard!");
         })
         .catch(() => {
-          // Fallback if clipboard API fails
           window.open("tel:+919339058372");
         });
     }
@@ -1363,10 +1579,20 @@ export default function Banner() {
                 borderRadius: "8px",
                 fontWeight: "bold",
                 boxShadow: "0 4px 8px rgba(0,0,0,0.3)",
+                animation: "jump 1.5s ease infinite",
+                "@keyframes jump": {
+                  "0%, 100%": {
+                    transform: "translateY(0) scale(1)",
+                  },
+                  "50%": {
+                    transform: "translateY(-15px) scale(1.05)",
+                  },
+                },
                 "&:hover": {
                   backgroundColor: "#45a049",
-                  transform: "scale(1.05)",
+                  transform: "scale(1.1)",
                   boxShadow: "0 6px 12px rgba(0,0,0,0.4)",
+                  animation: "none",
                 },
                 transition: "all 0.3s ease",
               }}
