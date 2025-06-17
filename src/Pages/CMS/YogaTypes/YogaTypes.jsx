@@ -352,7 +352,7 @@ const YogaTypes = () => {
     fontSize: { xs: '0.75rem', sm: '0.875rem' }
   }}
   component={Link} // Add this
-  to={`/course/yoga/${yoga.id}`} // Add this
+  to={`/yogaTypesDetails/yoga/${yoga.id}`} // Add this
 >
   Read More
 </Button>

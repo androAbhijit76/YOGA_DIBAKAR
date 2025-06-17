@@ -6,8 +6,10 @@ import AboutUs from "./Pages/CMS/AboutUs/AboutUs";
 import "./App.css";
 import Contact from "./Pages/CMS/Contact/Contact"; 
 import CourseSection from "./Pages/CMS/CourseSection/CourseSection";
+// import YogaTypesDetails from "./Pages/CMS/YogaTypesDetails/YogaTypesDetails"; 
 import YogaTypesDetails from "./Pages/CMS/YogaTypesDetails/YogaTypesDetails";
-
+// import CourseDetails from "./CourseDetails/CourseDetails";  
+import CourseDetailsPage from "./Pages/CMS/CouseDetailsPage/CourseDetailsPage";
 
 
 export default function App() {
@@ -19,7 +21,10 @@ export default function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/con" element={<Contact />} /> 
           <Route path="/course" element={<CourseSection/>}/> 
-          <Route path="/course/yoga/:id" element={<YogaTypesDetails />} />
+          <Route path="/yogaTypesDetails/yoga/:id" element={<YogaTypesDetails />} />  
+          <Route path="/courseDetailsPage/course/:id" element={<CourseDetailsPage />} />
+
+
 
         </Routes> 
         

@@ -136,7 +136,7 @@
       "A fluid, breath-to-movement practice with sequences that vary creatively. Combines dynamic transitions with mindful alignment for a balanced workout. Enhances cardiovascular health, mobility, and mental clarity.",  
       descriptions:
       "Vinyasa Yoga is the creative evolution of Ashtanga's flowing style, offering endless variations rather than fixed sequences. Often described as 'moving meditation,' its hallmark is the seamless synchronization of breath and movement - each transition happens precisely on an inhale or exhale. Teachers design unique 'flows' (sequences) that may focus on specific themes: hip openers, heart openers, or balance poses, for example. The practice naturally builds heat through continuous movement, but pace varies from slow, alignment-focused flows to athletic 'Power Vinyasa.' Unlike Ashtanga, there's no requirement to memorize sequences - practitioners follow verbal cues, making it accessible yet endlessly challenging. Advanced variations include arm balances and inversions woven into flows. The emphasis on mindful transitions makes it particularly effective for stress reduction, as the need to coordinate breath with complex movements leaves little mental space for distractions. Many find the rhythmic, dance-like quality addictive once they develop 'flow state' awareness.",
-    image: "/img/vinyasa.jpg",
+    image: "/img/vinayasa.jpg",
     benefits: "Boosts heart health, builds lean muscle, and enhances coordination",
     difficulty: "Intermediate to Advanced",
     duration: "45-75 minutes",
@@ -181,7 +181,7 @@
       "Active sequences and dynamic flows to elevate heart rate, boost metabolism, and promote fat burning. Combines strength-building poses with mindful breathing for holistic weight management. Supports sustainable lifestyle changes.", 
       descriptions:
       "Weight Loss Yoga combines the calorie-torching intensity of Power Yoga with targeted metabolic strategies. A typical class might cycle through: 1) Dynamic flows to spike heart rate (e.g., rapid Sun Salutation variations), 2) Isometric holds in muscle-building poses (like Chair Pose pulses) to create afterburn effect, and 3) Twisting postures that stimulate digestive organs. Unlike gym workouts, it emphasizes full-range functional movements that engage stabilizing muscles often neglected in weight training. The secret weapon? Breathwork - kapalabhati (skull-shining breath) performed in short bursts can increase metabolic rate by 15-20% for hours post-practice. Many programs incorporate Ayurvedic principles, suggesting poses that balance individual doshas (body types) - for example, Pitta types benefit from cooling Moon Salutations rather than heating Sun Salutations. For optimal results, practitioners should complement 3-4 weekly sessions with yoga's mindfulness tools to reduce stress-eating triggers.",
-    image: "/img/weightloss.jpg",
+    image: "/img/weightloss1.jpg",
     benefits: "Burns calories, tones muscles, and enhances body awareness",
     difficulty: "Beginner to Advanced",
     duration: "30-60 minutes",
@@ -196,7 +196,7 @@
       "A restorative practice using modified poses, props, and breathwork to address injuries, chronic pain, or stress. Prioritizes alignment and mindful movement for healing and relaxation. Suitable for rehabilitation or gentle conditioning.", 
       descriptions:
       "Therapeutic Yoga is a personalized approach that adapts ancient practices for modern ailments. Drawing from Iyengar, Yin, and restorative traditions, certified therapists assess individual needs - whether rehabbing a rotator cuff injury, managing fibromyalgia, or alleviating anxiety - then design protocols using precise prop alignment. For example: a bulging disc might be addressed with supported Bridge Pose (bolster under hips), while PTSD could involve trauma-sensitive sequencing that avoids triggering positions. The magic lies in 'active relaxation' - using minimal muscular engagement to release chronic tension patterns. Props aren't optional here; straps, sandbags, and specialized chairs allow those with limited mobility to experience poses' benefits. Emerging research shows specific protocols can rival pharmaceuticals for conditions like hypertension (legs-up-the-wall pose lowers BP by 10-15 mmHg) and insomnia (supported Child's Pose triggers parasympathetic response). Many physical therapists now integrate these techniques into rehabilitation programs.",
-    image: "/img/Therapeutic.jpg",
+    image: "/img/Therapatic.jpg",
     benefits: "Alleviates pain, improves joint mobility, and reduces anxiety",
     difficulty: "All levels",
     duration: "30-60 minutes",
