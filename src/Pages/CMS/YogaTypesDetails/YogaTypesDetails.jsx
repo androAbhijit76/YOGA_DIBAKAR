@@ -1514,9 +1514,13 @@ import {
   People,
   
 } from '@mui/icons-material';
-import { useEffect } from 'react';
+import { useEffect } from 'react';  
 
-const YogaTypesDetails = () => {
+
+
+
+const YogaTypesDetails = () => { 
+  
   const { id } = useParams();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -1529,7 +1533,9 @@ const YogaTypesDetails = () => {
   const navigate=useNavigate() 
   const handleGo=()=>{
     navigate(-1)
-  }
+  }   
+
+ 
   
   const yoga = yogaArray.find(item => item.id.toString() === id);
 
@@ -1544,23 +1550,14 @@ const YogaTypesDetails = () => {
         justifyContent: 'center',
         alignItems: 'center'
       }}>
-        <Typography variant={isMobile ? 'h5' : 'h4'} sx={{ 
+        <Typography variant={isMobile ? 'h4' : 'h3'} sx={{ 
           mb: 2, 
           color: theme.palette.error.main,
           px: 2
         }}>
-          Yoga type not found
+          The page can’t be found.
         </Typography>
-        <Button 
-          component={Link} 
-          to="/course" 
-          variant="contained" 
-          sx={{ mt: 3 }}
-          startIcon={<ArrowBack />}
-          size={isMobile ? 'medium' : 'large'}
-        >
-          Back to Courses
-        </Button>
+      
       </Box>
     );
   }
@@ -2013,4 +2010,33 @@ const YogaTypesDetails = () => {
   );
 };
 
-export default YogaTypesDetails;
+export default YogaTypesDetails;    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

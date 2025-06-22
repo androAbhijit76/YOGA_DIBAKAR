@@ -60,7 +60,7 @@ export default function HeroCourse() {
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundImage: "url(/img/courseb2.jpg)",
+            backgroundImage: "url(/img/courseb1.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

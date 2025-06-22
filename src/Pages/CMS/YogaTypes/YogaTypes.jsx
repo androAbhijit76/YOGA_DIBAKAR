@@ -241,7 +241,7 @@ import { useState } from "react";
 const YogaTypes = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md')); 
+  // const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md')); 
   const [yogadata,setYogadata]=useState(yogaArray) 
   console.log(yogadata);
   

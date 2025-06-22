@@ -2657,7 +2657,479 @@
 
 
 
-import { useParams } from 'react-router-dom';
+// import { useNavigate, useParams } from 'react-router-dom';
+// import {
+//   Box,
+//   Typography,
+//   Container,
+//   Grid,
+//   Chip,
+//   Rating,
+//   Stack,
+//   Divider,
+//   List,
+//   ListItem,
+//   ListItemText,
+//   Button,
+//   useTheme,
+//   Card,
+//   CardContent,
+//   Avatar,
+    
+
+//   Paper,
+//   useMediaQuery
+// } from '@mui/material';
+// import {
+//   AccessTime as DurationIcon,
+//   People as StudentsIcon,
+//   Star as StarIcon,
+//   School as SchoolIcon,
+//   CheckCircle as CheckIcon,
+//   MenuBook as SyllabusIcon,
+//   CardMembership as CertIcon,
+//   Info as InfoIcon,
+  
+// } from '@mui/icons-material';
+// import { courses } from '../../../Courses';
+
+// const CourseDetailsPage = () => {
+//   const { id } = useParams();
+//   const theme = useTheme();
+//   const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // < 600px
+//   const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md')); // 600px - 900px
+//   const isLaptop = useMediaQuery(theme.breakpoints.between('md', 'lg')); // 900px - 1200px
+//   const isDesktop = useMediaQuery(theme.breakpoints.up('lg')); // > 1200px
+
+//   const courseDetails = courses.find(item => item.id.toString() === id);
+    
+
+ 
+
+   
+
+
+
+//   if (!courseDetails) {
+//       return (
+//         <Box sx={{ 
+//           py: 8, 
+//           textAlign: 'center',
+//           minHeight: '80vh',
+//           display: 'flex',
+//           flexDirection: 'column',
+//           justifyContent: 'center',
+//           alignItems: 'center',
+//           // mt:'5rem'
+//         }}>
+//           <Typography variant={isMobile ? 'h4' : 'h2'} sx={{ 
+//             mb: 2, 
+//             color: theme.palette.error.main,
+//             px: 2
+//           }}>
+//             The page can’t be found.
+
+//           </Typography>
+        
+//         </Box>
+//       );
+//     }
+  
+
+//   return (
+//     <Box sx={{ 
+//       py: { xs: 2, sm: 3, md: 4 },
+//       backgroundColor: '#F8FAFC',
+//       marginTop: { xs: '90px', sm: '95px' },
+//       minHeight: 'calc(100vh - 40px)',
+      
+//     }}>
+//       <Container maxWidth={isDesktop ? 'lg' : isTablet ? 'md' : 'sm'}>
+//         {/* Hero Section */}
+//         <Paper elevation={0} sx={{ 
+//           mb: { xs: 2, sm: 3, md: 4 },
+//           p: { xs: 2, sm: 3, md: 4 },
+//           borderRadius: { xs: 1, sm: 2, md: 3 },
+//           background: `linear-gradient(135deg, ${courseDetails.color}10, #ffffff)`,
+//           border: `1px solid ${courseDetails.color}20`
+//         }}>
+//           <Grid container spacing={{ xs: 2, md: 3 }} alignItems="center">
+//             <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
+//               <Stack spacing={{ xs: 1.5, md: 2 }}>
+//                 <Chip
+//                   label={courseDetails.category}
+//                   size={isMobile ? 'small' : 'medium'}
+//                   sx={{
+//                     backgroundColor: `${courseDetails.color}20`,
+//                     color: courseDetails.color,
+//                     fontWeight: 700,
+//                     alignSelf: 'flex-start'
+//                   }}
+//                 />
+                
+//                 <Typography 
+//                   variant="h1" 
+//                   sx={{ 
+//                     fontWeight: 800,
+//                     fontSize: { 
+//                       xs: '1.5rem',   // Mobile
+//                       sm: '1.75rem',  // Tablet
+//                       md: '2rem',     // Laptop
+//                       lg: '2.25rem'   // Desktop
+//                     },
+//                     lineHeight: 1.2
+//                   }}
+//                 >
+//                   {courseDetails.title}
+//                 </Typography>
+                
+//                 <Typography
+//                   variant={isMobile ? 'body2' : 'body1'}
+//                   sx={{ color: 'text.secondary' }}
+//                 >
+//                   {courseDetails.descriptions}
+//                 </Typography>
+                
+//                 <Stack 
+//                   direction="row" 
+//                   spacing={1.5} 
+//                   alignItems="center"
+//                   flexWrap="wrap"
+//                   rowGap={1}
+//                 >
+//                   <Rating
+//                     value={courseDetails.rating}
+//                     precision={0.1}
+//                     readOnly
+//                     size={isMobile ? 'small' : 'medium'}
+//                     icon={<StarIcon fontSize="inherit" />}
+//                     sx={{
+//                       color: courseDetails.color,
+//                       '& .MuiRating-iconFilled': {
+//                         color: courseDetails.color,
+//                       },
+//                     }}
+//                   />
+//                   <Typography variant={isMobile ? 'body2' : 'body1'} sx={{ fontWeight: 600 }}>
+//                     {courseDetails.rating} ({courseDetails.reviews} reviews)
+//                   </Typography>
+//                 </Stack>
+                
+//                 <Stack 
+//                   direction="row" 
+//                   spacing={{ xs: 1.5, md: 2 }} 
+//                   flexWrap="wrap" 
+//                   rowGap={1}
+//                   alignItems="center"
+//                 >
+//                   <Stack direction="row" spacing={1} alignItems="center">
+//                     <DurationIcon sx={{ 
+//                       color: 'text.secondary', 
+//                       fontSize: isMobile ? '1rem' : '1.25rem' 
+//                     }} />
+//                     <Typography variant={isMobile ? 'body2' : 'body1'}>
+//                       {courseDetails.duration}
+//                     </Typography>
+//                   </Stack>
+//                   <Stack direction="row" spacing={1} alignItems="center">
+//                     <StudentsIcon sx={{ 
+//                       color: 'text.secondary', 
+//                       fontSize: isMobile ? '1rem' : '1.25rem' 
+//                     }} />
+//                     <Typography variant={isMobile ? 'body2' : 'body1'}>
+//                       {courseDetails.students}+ students
+//                     </Typography>
+//                   </Stack>
+//                   <Chip
+//                     label={courseDetails.level}
+//                     size={isMobile ? 'small' : 'medium'}
+//                     sx={{
+//                       backgroundColor: `${courseDetails.color}15`,
+//                       color: courseDetails.color,
+//                       fontWeight: 700,
+//                     }}
+//                   />
+//                 </Stack>
+//               </Stack>
+//             </Grid>
+            
+//             <Grid item xs={12} md={6} order={{ xs: 1, md: 2 }}>
+//               <Box sx={{
+//                 height: { 
+//                   xs: '200px',  // Mobile
+//                   sm: '250px',  // Tablet
+//                   md: '300px', // Laptop
+//                   lg: '350px'   // Desktop
+//                 },
+//                 borderRadius: { xs: 1, sm: 2 },
+//                 overflow: 'hidden',
+//                 boxShadow: theme.shadows[2],
+//                 display: 'flex',
+//                 justifyContent: 'center',
+//                 alignItems: 'center',
+//                 backgroundColor: '#f5f5f5',
+//                 marginTop:"1.5rem"
+//               }}>
+//                 <img
+//                   src={courseDetails.image}
+//                   alt={courseDetails.title}
+//                   style={{
+//                     height: '100%',
+//                     width: 'auto',
+//                     maxWidth: '100%',
+//                     objectFit: "contain"
+//                   }}
+//                 />
+//               </Box>
+//             </Grid>
+//           </Grid>
+//         </Paper>
+
+//         {/* Main Content */}
+//         <Grid container spacing={{ xs: 2, md: 3 }}>
+//           {/* Left Column - Course Content */}
+//           <Grid item xs={12} md={8}>
+//             {/* Learning Outcomes */}
+//             <Card sx={{ 
+//               mb: { xs: 2, sm: 3 },
+//               borderRadius: { xs: 1, sm: 2 },
+//               boxShadow: theme.shadows[1]
+//             }}>
+//               <CardContent>
+//                 <Stack direction="row" alignItems="center" spacing={1.5} sx={{ mb: 2 }}>
+//                   <SchoolIcon color="primary" fontSize={isMobile ? 'small' : 'medium'} />
+//                   <Typography variant={isMobile ? 'h5' : 'h4'} sx={{ fontWeight: 700 }}>
+//                     What You'll Learn
+//                   </Typography>
+//                 </Stack>
+                
+//                 <Grid container spacing={1.5}>
+//                   {courseDetails.learningOutcomes.map((outcome, index) => (
+//                     <Grid item xs={12} sm={6} key={index}>
+//                       <Stack direction="row" spacing={1.5} alignItems="flex-start">
+//                         <CheckIcon 
+//                           fontSize={isMobile ? 'small' : 'medium'} 
+//                           sx={{ color: courseDetails.color, mt: '2px' }} 
+//                         />
+//                         <Typography variant={isMobile ? 'body2' : 'body1'}>
+//                           {outcome}
+//                         </Typography>
+//                       </Stack>
+//                     </Grid>
+//                   ))}
+//                 </Grid>
+//               </CardContent>
+//             </Card>
+
+//             {/* Curriculum */}
+//             <Card sx={{ 
+//               mb: { xs: 2, sm: 3 },
+//               borderRadius: { xs: 1, sm: 2 },
+//               boxShadow: theme.shadows[1]
+//             }}>
+//               <CardContent>
+//                 <Stack direction="row" alignItems="center" spacing={1.5} sx={{ mb: 2 }}>
+//                   <SyllabusIcon color="primary" fontSize={isMobile ? 'small' : 'medium'} />
+//                   <Typography variant={isMobile ? 'h5' : 'h4'} sx={{ fontWeight: 700 }}>
+//                     Course Curriculum
+//                   </Typography>
+//                 </Stack>
+                
+//                 <List sx={{ 
+//                   border: '1px solid', 
+//                   borderColor: 'divider', 
+//                   borderRadius: 1 
+//                 }}>
+//                   {courseDetails.syllabus.map((item, index) => (
+//                     <ListItem 
+//                       key={index}
+//                       divider={index < courseDetails.syllabus.length - 1}
+//                       sx={{ 
+//                         py: { xs: 1, sm: 1.5 },
+//                         '&:hover': {
+//                           backgroundColor: 'action.hover'
+//                         }
+//                       }}
+//                     >
+//                       <ListItemText
+//                         primary={
+//                           <Typography variant={isMobile ? 'body2' : 'body1'}>
+//                             {index + 1}. {item}
+//                           </Typography>
+//                         }
+//                         // secondary={
+//                         //   <Typography variant="caption" color="text.secondary">
+//                         //     {index % 2 === 0 ? 'Video · 15 min' : 'Reading · 10 min'}
+//                         //   </Typography>
+//                         // }
+//                         sx={{
+//                           '& .MuiListItemText-primary': {
+//                             mb: 0.5
+//                           }
+//                         }}
+//                       />
+//                     </ListItem>
+//                   ))}
+//                 </List>
+//               </CardContent>
+//             </Card>
+
+//             {/* Requirements (Mobile only) */}
+//             <Card sx={{ 
+//               display: { xs: 'block', md: 'none' },
+//               mb: { xs: 2, sm: 3 },
+//               borderRadius: { xs: 1, sm: 2 },
+//               boxShadow: theme.shadows[1]
+//             }}>
+//               <CardContent>
+//                 <Stack direction="row" alignItems="center" spacing={1.5} sx={{ mb: 2 }}>
+//                   <InfoIcon color="primary" fontSize={isMobile ? 'small' : 'medium'} />
+//                   <Typography variant={isMobile ? 'h5' : 'h4'} sx={{ fontWeight: 700 }}>
+//                     Requirements
+//                   </Typography>
+//                 </Stack>
+//                 <Typography variant={isMobile ? 'body2' : 'body1'} sx={{ mb: 1 }}>
+//                   {courseDetails.prerequisites}
+//                 </Typography>
+//               </CardContent>
+//             </Card>
+//           </Grid>
+
+//           {/* Right Column - Sidebar */}
+//           <Grid item xs={12} md={4}>
+//             <Box sx={{ 
+//               position: { xs: 'static', md: 'sticky' },
+//               top: { md: '80px' },
+//               mb: { xs: 2, md: 0 }
+//             }}>
+//               <Card sx={{ 
+//                 borderRadius: { xs: 1, sm: 2 },
+//                 boxShadow: theme.shadows[2],
+//                 mb: { xs: 2, sm: 3 }
+//               }}>
+//                 <CardContent>
+//                   <Stack spacing={2.5}>
+//                     <Box sx={{ textAlign: 'center' }}>
+//                       <Button
+//                         variant="contained"
+//                         size={isMobile ? 'medium' : 'large'}
+//                         fullWidth
+//                         sx={{
+//                           py: { xs: 1, sm: 1.25, md: 1.5 },
+//                           borderRadius: 1,
+//                           fontWeight: 700,
+//                           fontSize: {
+//                             xs: '0.875rem',
+//                             sm: '0.9375rem',
+//                             md: '1rem'
+//                           },
+//                           backgroundColor: courseDetails.color,
+//                           '&:hover': {
+//                             backgroundColor: courseDetails.color,
+//                             opacity: 0.9
+//                           },
+//                         }}
+//                       >
+//                         Enroll Now
+//                       </Button>
+//                     </Box>
+
+//                     <Divider />
+
+//                     <Box>
+//                       <Typography 
+//                         variant={isMobile ? 'h6' : 'h5'} 
+//                         sx={{ fontWeight: 700, mb: 1 }}
+//                       >
+//                         Certification
+//                       </Typography>
+//                       <Stack direction="row" spacing={1.5} alignItems="center">
+//                         <CertIcon 
+//                           color="primary" 
+//                           fontSize={isMobile ? 'small' : 'medium'} 
+//                         />
+//                         <Typography variant={isMobile ? 'body2' : 'body1'}>
+//                           {courseDetails.certification}
+//                         </Typography>
+//                       </Stack>
+//                     </Box>
+//                   </Stack>
+//                 </CardContent>
+//               </Card>
+
+//               {/* Requirements (Desktop only) */}
+//               <Card sx={{ 
+//                 display: { xs: 'none', md: 'block' },
+//                 borderRadius: { xs: 1, sm: 2 },
+//                 boxShadow: theme.shadows[1]
+//               }}>
+//                 <CardContent>
+//                   <Stack direction="row" alignItems="center" spacing={1.5} sx={{ mb: 2 }}>
+//                     <InfoIcon color="primary" fontSize="medium" />
+//                     <Typography variant="h5" sx={{ fontWeight: 700 }}>
+//                       Requirements
+//                     </Typography>
+//                   </Stack>
+//                   <Typography variant="body1" sx={{ mb: 1 }}>
+//                     {courseDetails.prerequisites}
+//                   </Typography>
+//                 </CardContent>
+//               </Card>
+//             </Box>
+//           </Grid>
+//         </Grid>
+//       </Container>
+//     </Box>
+//   );
+// };
+
+// export default CourseDetailsPage;   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import {  useNavigate, useParams } from 'react-router-dom';
 import {
   Box,
   Typography,
@@ -2674,7 +3146,7 @@ import {
   useTheme,
   Card,
   CardContent,
-  Avatar,
+  // Avatar,
   Paper,
   useMediaQuery
 } from '@mui/material';
@@ -2686,24 +3158,49 @@ import {
   CheckCircle as CheckIcon,
   MenuBook as SyllabusIcon,
   CardMembership as CertIcon,
-  Info as InfoIcon
+  Info as InfoIcon,
+  ArrowBack as ArrowBackIcon
 } from '@mui/icons-material';
 import { courses } from '../../../Courses';
+import { useEffect } from 'react';
+// import { Typography } from '@mui/material';
 
 const CourseDetailsPage = () => {
   const { id } = useParams();
+  const navigate = useNavigate(); 
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // < 600px
   const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md')); // 600px - 900px
-  const isLaptop = useMediaQuery(theme.breakpoints.between('md', 'lg')); // 900px - 1200px
+  // const isLaptop = useMediaQuery(theme.breakpoints.between('md', 'lg')); // 900px - 1200px
   const isDesktop = useMediaQuery(theme.breakpoints.up('lg')); // > 1200px
 
-  const courseDetails = courses.find(item => item.id.toString() === id);
+  const courseDetails = courses.find(item => item.id.toString() === id); 
+  const handleCourse=()=>{
+    navigate(-1)
+  }
 
   if (!courseDetails) {
     return (
-      <Box sx={{ py: 8, display: 'flex', justifyContent: 'center' }}>
-        <Typography variant="h4">Course not found</Typography>
+      <Box sx={{ 
+        py: 8, 
+        textAlign: 'center',
+        minHeight: '80vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
+        <Typography variant={isMobile ? 'h4' : 'h2'} sx={{ 
+          mb: 2, 
+          color: theme.palette.error.main,
+          px: 2
+        }}>
+          The page can't be found.
+        </Typography>
       </Box>
     );
   }
@@ -2714,9 +3211,25 @@ const CourseDetailsPage = () => {
       backgroundColor: '#F8FAFC',
       marginTop: { xs: '90px', sm: '95px' },
       minHeight: 'calc(100vh - 40px)',
-      
     }}>
       <Container maxWidth={isDesktop ? 'lg' : isTablet ? 'md' : 'sm'}>
+        {/* Back Button */}
+        
+        
+        <Button
+          startIcon={<ArrowBackIcon />}
+          onClick={handleCourse}
+          sx={{
+            mb: 2,
+            mt:4,
+           backgroundColor:"blueviolet",
+           color:'white'
+          }}
+        >
+          Back to Courses
+        </Button>
+      
+
         {/* Hero Section */}
         <Paper elevation={0} sx={{ 
           mb: { xs: 2, sm: 3, md: 4 },
@@ -2929,11 +3442,6 @@ const CourseDetailsPage = () => {
                             {index + 1}. {item}
                           </Typography>
                         }
-                        // secondary={
-                        //   <Typography variant="caption" color="text.secondary">
-                        //     {index % 2 === 0 ? 'Video · 15 min' : 'Reading · 10 min'}
-                        //   </Typography>
-                        // }
                         sx={{
                           '& .MuiListItemText-primary': {
                             mb: 0.5
@@ -3055,17 +3563,7 @@ const CourseDetailsPage = () => {
   );
 };
 
-export default CourseDetailsPage;   
-
-
-
-
-
-
-
-
-
-
+export default CourseDetailsPage;
 
 
 
