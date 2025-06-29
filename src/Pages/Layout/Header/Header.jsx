@@ -140,7 +140,10 @@
 
 import { useState, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { RxCross1 } from "react-icons/rx";
+import { RxCross1 } from "react-icons/rx"; 
+// import { FiMenu } from "react-icons/fi"; // Cleaner hamburger
+// import { FiX } from "react-icons/fi"; // Matching close icon
+
 import { Link } from "react-router-dom";
 
 export default function Header() {
@@ -188,10 +191,10 @@ export default function Header() {
             />
           </div>
 
-          <nav className={`menu-mobile ${showMenu ? "open" : ""}`}>
+          <nav className={`menu-mobile ${showMenu ? "open" : ""}`}  >
             <ul>
               <li>
-                <Link to="/" onClick={closeMenu}>
+                <Link to="/" onClick={closeMenu} >
                   Home
                 </Link>
               </li>
@@ -216,9 +219,9 @@ export default function Header() {
           <div className="ham-menu">
             <button onClick={handleButtonToggle}>
               {showMenu ? (
-                <RxCross1 size="3rem" />
+                <RxCross1 color="blue" size="3rem" />
               ) : (
-                <GiHamburgerMenu size="3.2rem" />
+                <GiHamburgerMenu color="purple" size="3rem" />
               )}
             </button>
           </div>

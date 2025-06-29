@@ -3129,7 +3129,7 @@
 
 
 
-import {  useNavigate, useParams } from 'react-router-dom';
+import {  Link, useNavigate, useParams } from 'react-router-dom';
 import {
   Box,
   Typography,
@@ -3509,6 +3509,8 @@ const CourseDetailsPage = () => {
                             opacity: 0.9
                           },
                         }}
+                        component={Link} 
+                        to="https://docs.google.com/forms/d/1jwGtrgWazbX-c3StW2ZO3FCXbg9-6hwTKe0d4-YkG6w/edit"
                       >
                         Enroll Now
                       </Button>

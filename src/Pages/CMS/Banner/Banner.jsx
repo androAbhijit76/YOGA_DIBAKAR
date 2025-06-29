@@ -1488,7 +1488,7 @@ export default function Banner() {
               variant="h4"
               data-aos="zoom-in-up"
               sx={{
-                color: "white",
+                color: "beige",
                 textAlign: "left",
                 fontSize: { xs: "1.2rem", sm: "1.5rem", md: "2rem", lg: "2.5rem" },
                 fontWeight: "bold",
@@ -1513,7 +1513,8 @@ export default function Banner() {
               <Box
                 component="span"
                 sx={{
-                  color: "#800080",
+                  // color: "#800080", 
+                  color: "orange",
                   fontSize: { xs: "1.5rem", sm: "1.8rem", md: "2.3rem", lg: "2.8rem" },
                   display: "inline-block",
                 }}
@@ -1524,7 +1525,8 @@ export default function Banner() {
               <Box
                 component="span"
                 sx={{
-                  color: "#800080",
+                  // color: "#800080", 
+                  color: "orange",
                   fontSize: { xs: "1.5rem", sm: "1.8rem", md: "2.3rem", lg: "2.8rem" },
                   display: "inline-block",
                 }}
@@ -1534,7 +1536,8 @@ export default function Banner() {
               <Box
                 component="span"
                 sx={{
-                  color: "#800080",
+                  // color: "#800080", 
+                  color: "orange",
                   fontSize: { xs: "1.5rem", sm: "1.8rem", md: "2.3rem", lg: "2.8rem" },
                   display: "inline-block",
                 }}
@@ -1558,7 +1561,7 @@ export default function Banner() {
               <Box
                 component="span"
                 sx={{
-                  color: "#1E90FF",
+                  color: "beige",
                   fontSize: { xs: "1.5rem", sm: "1.8rem", md: "2.3rem", lg: "2.8rem" },
                 }}
               >
@@ -1572,7 +1575,7 @@ export default function Banner() {
               onClick={handleCallNow}
               sx={{
                 mt: { xs: 1, sm: 2 },
-                backgroundColor: "#4CAF50",
+                backgroundColor: "light-purple",
                 color: "white",
                 fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" },
                 padding: { xs: "8px 16px", sm: "10px 22px", md: "12px 28px" },
@@ -1589,7 +1592,7 @@ export default function Banner() {
                   },
                 },
                 "&:hover": {
-                  backgroundColor: "#45a049",
+                  backgroundColor: "purple",
                   transform: "scale(1.1)",
                   boxShadow: "0 6px 12px rgba(0,0,0,0.4)",
                   animation: "none",

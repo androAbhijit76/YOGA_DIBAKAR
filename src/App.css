@@ -82,7 +82,25 @@ header {
   top: 0; /* Stick to the top */
   left: 0; /* Align to the left */
   z-index: 1000; /* Ensure it stays above other content */
+}   
+
+
+
+
+
+header .container .navbar-grid nav ul li a {
+  color:#1A5276; /* Purple */
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
+
+header .container .navbar-grid nav ul li a:hover {
+  color: #6a3093; /* Darker purple */
+  text-decoration: underline;
+}
+
 
 .container {
   max-width: 132rem;
@@ -114,13 +132,28 @@ header {
   height: auto; /* Maintain aspect ratio */
   width: 150px; /* Default size for larger screens */
   transition: width 0.3s ease; /* Smooth transition for resizing */
-}
+}   
+
+
+
 
 /* Media Queries for Responsive Logo Sizing */
 @media screen and (max-width: 998px) {
   .logo-img {
     width: 120px; /* Slightly smaller for tablets */
+  }  
+
+  .menu-mobile ul li a {
+    color: white !important; /* Force white color */
+    font-weight: 500; /* Optional: make text slightly bolder for better visibility */
   }
+
+  /* Optional: hover styles for mobile menu */
+  .menu-mobile ul li a:hover {
+    color: #f0f0f0 !important; /* Slightly lighter white on hover */
+    text-decoration: underline;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -131,7 +164,7 @@ header {
 
 @media screen and (max-width: 480px) {
   .logo-img {
-    width: 80px; /* Smallest for mobile devices */
+    width: 100px; /* Smallest for mobile devices 80px*/
   }
 }
 
@@ -164,9 +197,16 @@ nav ul {
     position: absolute;
     top: 8rem;
     left: 0;
-    /* background-color: #fff; */  
+    /* background-color: #fff;   */
 
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba7 100%);     */
+    /* background: linear-gradient(135deg, #a3bded 0%, #6991c7 100%);  */
+    /* background: linear-gradient(135deg, #4776E6 0%, #8E54E9 100%);  */
+    background: linear-gradient(135deg, #4776E6 0%, #8E54E9 100%);    
+    
+    
+       
+
 
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px;
